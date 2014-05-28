@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="GroupActionBar">
+        <attr name="setText" format="string" />
+        <attr name="showBackButton" format="boolean" />
+        <attr name="showBackButtonText" format="boolean" />
+    </declare-styleable>
+
+</resources>

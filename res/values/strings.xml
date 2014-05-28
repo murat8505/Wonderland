@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wonderland</string>
+    <string name="story">Story</string>
+    <string name="plot">Plot</string>
+    <string name="plot_title">Alice in Wonderland</string>
+    <string name="story_text_1">Alice debuted in Lewis Carroll\'s first version of Alice\'s Adventures in Wonderland, Alice\'s Adventures Under Ground (1864).[1] According to Carroll, Under Ground originated from stories told to the Liddell sisters during an afternoon on 4 July 1862.[1] As Carroll\'s drawing of Alice bears little physical resemblance to Alice Liddell, whose given name she shares, biographer Anne Clark has suggested that Alice\'s younger sister, Edith, might have been Carroll\'s model.[2] Carroll portrays his protagonist as wearing a tunic, in contrast to the "fitted children\'s dresses with soft trim" that the Liddell sisters might have worn.[3] According to Jeffery Stern, Carroll\'s illustrations drew influence from the Pre-Raphaelite painters Dante Gabriel Rossetti (1828-1882) and Arthur Hughes (1832-1915), whose painting Girl with the Liliacs (1863) he possessed and visually alluded to in one drawing in Under Ground.[4] In the text of the two Alice books, Carroll often did not remark on the physical appearance of his protagonist, offering only "very few details".[5]</string>
+    <string name="story_text_2">In his illustrations for Alice Adventures in Wonderland (1865), John Tenniel (1820-1914) took a drastic departure from Carroll\'s original illustrations.[6] His depiction of Alice has its origins in a physically similar character he drew in at least eight cartoons for the satirical magazine Punch, during a four-year period that began in 1860.[7] In an 1860 cartoon, this character wore "the full skirt, pale stockings, flat shoes, and a hairband over her loose hair."[7] The character served as "one of Tenniel\'s prototypical representations of a nice middle-class girl," according to scholar Will Brooker.[8] Alice\'s clothes are typical of what a girl belonging to the middle class in the mid-Victorian era might have worn at home.[7] Tenniel changed Alice\'s clothing slightly in the sequel Through the Looking-Glass (1871), where she wears horizonal-striped stockings instead of plain ones and has a </string>
+    <string name="carroll_title">Differences From Book</string>
+    <string name="strangeness_title">Curiosity</string>
+    <string name="strangeness">Strangeness</string>
+    <string name="carroll">L. Carroll</string>
+    <string name="extras">Extras</string>
+    <string name="error">Error!</string>
+    <string name="connot_open_res">I can\'t open the selected resource.\nI\'m sorry :(</string>
+    <string name="audioTitle">Audio</string>
+    <string name="close">Close</string>
+</resources>
