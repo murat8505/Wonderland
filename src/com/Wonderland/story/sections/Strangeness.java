@@ -13,9 +13,9 @@ public class Strangeness extends AbstractStoryActivity {
 
     @Override
     public void setData() {
-        myTabWidget.addTab(R.string.strangeness_title, Constants.curiosity_1, R.drawable.curiosity_1);
-        myTabWidget.addTab(0, Constants.curiosity_2, R.drawable.curiosity_2);
-        myTabWidget.addTab(0, Constants.curiosity_3, R.drawable.curiosity_3);
+        myTabWidget.addTab(R.string.strangeness_title, Constants.CURIOSITY_1, R.drawable.curiosity_1);
+        myTabWidget.addTab(0, Constants.CURIOSITY_2, R.drawable.curiosity_2);
+        myTabWidget.addTab(0, Constants.CURIOSITY_3, R.drawable.curiosity_3);
     }
 
     @Override

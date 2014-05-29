@@ -13,9 +13,9 @@ public class Plot extends AbstractStoryActivity {
 
     @Override
     public void setData() {
-        myTabWidget.addTab(R.string.plot_title, Constants.plot_1, R.drawable.plot_1);
-        myTabWidget.addTab(0, Constants.plot_2, R.drawable.plot_2);
-        myTabWidget.addTab(0, Constants.plot_3, R.drawable.plot_3);
+        myTabWidget.addTab(R.string.plot_title, Constants.PLOT_1, R.drawable.plot_1);
+        myTabWidget.addTab(0, Constants.PLOT_2, R.drawable.plot_2);
+        myTabWidget.addTab(0, Constants.PLOT_3, R.drawable.plot_3);
     }
 
     @Override
