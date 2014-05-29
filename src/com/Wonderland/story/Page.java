@@ -27,9 +27,9 @@ public class Page extends Fragment {
     private int image;
 
     /**
-     * Resource of the text to show in the frame
+     * String of the text to show in the frame
      */
-    private int text;
+    private String text;
 
     /**
      * Resource of the title of the frame
@@ -44,7 +44,7 @@ public class Page extends Fragment {
         // recover the arguments from the intent
         Bundle sender = getArguments();
         image = sender.getInt(Constants.IMAGE, 0);
-        text = sender.getInt(Constants.TEXT, 0);
+        text = sender.getString(Constants.TEXT);
         title = sender.getInt(Constants.TITLE, 0);
     }
 
@@ -62,7 +62,7 @@ public class Page extends Fragment {
 
 
         Display display = getActivity().getWindowManager().getDefaultDisplay();
-        FlowTextHelper.tryFlowText(getText(text).toString(), imageView, textView, display);
+        FlowTextHelper.tryFlowText(text, imageView, textView, display);
 
 
         MyTextView myTextView = (MyTextView) v.findViewById(R.id.pageTitle);

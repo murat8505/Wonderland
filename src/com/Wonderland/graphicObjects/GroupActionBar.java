@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -18,7 +19,10 @@ import com.Wonderland.main.R;
  */
 public class GroupActionBar extends LinearLayout {
 
-    private Context context;
+    /**
+     * Back buttons
+     */
+    private ImageButton back, back_w;
 
     public GroupActionBar(Context context) {
         super(context);
@@ -41,10 +45,12 @@ public class GroupActionBar extends LinearLayout {
     }
 
     private void initialize(Context context, AttributeSet attrs) {
-        this.context = context;
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.group_action_bar, this, true);
+
+        back = (ImageButton) findViewById(R.id.back);
+        back_w = (ImageButton) findViewById(R.id.back_w);
 
         setText(R.string.app_name);
         showBackButton(false);
@@ -95,7 +101,7 @@ public class GroupActionBar extends LinearLayout {
      * @param show, boolean
      */
     public void showBackButton(boolean show) {
-        findViewById(R.id.group_back).setVisibility(Helper.getVisibility(show));
+        back.setVisibility(Helper.getVisibility(show));
     }
 
     /**
@@ -104,7 +110,11 @@ public class GroupActionBar extends LinearLayout {
      * @param show, boolean
      */
     public void showBackButtonText(boolean show) {
-        ((BackMenuButton) findViewById(R.id.group_back)).showText(show);
+
+        if (back.getVisibility() == VISIBLE && show)
+            back.setVisibility(INVISIBLE);
+
+        back_w.setVisibility(Helper.getVisibility(show));
     }
 
     /**
@@ -113,7 +123,10 @@ public class GroupActionBar extends LinearLayout {
      * @param onClickListener, OnClickListener
      */
     public void setBackButtonOnClickListener(OnClickListener onClickListener) {
-        ((BackMenuButton) findViewById(R.id.group_back)).setOnClickListener(onClickListener);
+        if (back.getVisibility() == VISIBLE)
+            back.setOnClickListener(onClickListener);
+        else
+            back_w.setOnClickListener(onClickListener);
     }
 
 }

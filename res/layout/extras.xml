@@ -6,13 +6,12 @@
     android:layout_height="match_parent"
     android:background="@color/Black">
 
-    <com.Wonderland.graphicObjects.GroupActionBar
-        xmlns:custom="http://schemas.android.com/apk/res/com.Wonderland.main"
+    <com.Wonderland.graphicObjects.GroupActionBar xmlns:custom="http://schemas.android.com/apk/res/com.Wonderland.main"
         android:layout_width="match_parent"
         android:layout_height="@dimen/action_bar"
         custom:showBackButton="true"
         custom:showBackButtonText="false"
-        android:id="@+id/menuActionBar"/>
+        android:id="@+id/menuActionBar" />
 
     <GridView
         android:id="@+id/gridView"
@@ -21,8 +20,7 @@
         android:stretchMode="columnWidth"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/sfondo_300dpi"/>
-
+        android:background="@drawable/story" />
 
 
 </LinearLayout>

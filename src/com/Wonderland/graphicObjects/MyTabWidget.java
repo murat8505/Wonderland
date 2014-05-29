@@ -64,10 +64,10 @@ public class MyTabWidget extends LinearLayout {
      * Method to add tabs
      *
      * @param title, int - id of the title. if 0 it will not be displayed
-     * @param text,  int - id of the text
+     * @param text,  String - the text
      * @param image, int - id of the resource image
      */
-    public void addTab(int title, int text, int image) {
+    public void addTab(int title, String text, int image) {
 
         spec = tabHost.newTabSpec("tab" + tabCounter).setIndicator("tab" + tabCounter);
         tabCounter++;
@@ -75,7 +75,7 @@ public class MyTabWidget extends LinearLayout {
         Bundle bundle = new Bundle();
         bundle.putInt(Constants.TITLE, title);
         bundle.putInt(Constants.IMAGE, image);
-        bundle.putInt(Constants.TEXT, text);
+        bundle.putString(Constants.TEXT, text);
 
         tabHost.addTab(spec, Page.class, bundle);
 

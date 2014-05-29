@@ -1,5 +1,6 @@
 package com.Wonderland.story.sections;
 
+import com.Wonderland.helpers.Constants;
 import com.Wonderland.main.R;
 import com.Wonderland.story.AbstractStoryActivity;
 
@@ -12,9 +13,9 @@ public class Carroll extends AbstractStoryActivity {
 
     @Override
     public void setData() {
-        myTabWidget.addTab(R.string.carroll_title, R.string.story_text_1, R.drawable.personaggio_plot1);
-        myTabWidget.addTab(0, R.string.story_text_2, R.drawable.personaggio_plot1);
-        myTabWidget.addTab(0, R.string.story_text_1, R.drawable.personaggio_plot1);
+        myTabWidget.addTab(R.string.carroll_title, Constants.carroll_1, R.drawable.carroll_1);
+        myTabWidget.addTab(0, Constants.carroll_2, R.drawable.carroll_2);
+        myTabWidget.addTab(0, Constants.carroll_3, R.drawable.carroll_3);
     }
 
     @Override

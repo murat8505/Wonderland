@@ -1,5 +1,6 @@
 package com.Wonderland.story.sections;
 
+import com.Wonderland.helpers.Constants;
 import com.Wonderland.main.R;
 import com.Wonderland.story.AbstractStoryActivity;
 
@@ -12,9 +13,9 @@ public class Plot extends AbstractStoryActivity {
 
     @Override
     public void setData() {
-        myTabWidget.addTab(R.string.plot_title, R.string.story_text_1, R.drawable.personaggio_plot1);
-        myTabWidget.addTab(0, R.string.story_text_2, R.drawable.personaggio_plot1);
-        myTabWidget.addTab(0, R.string.story_text_1, R.drawable.personaggio_plot1);
+        myTabWidget.addTab(R.string.plot_title, Constants.plot_1, R.drawable.plot_1);
+        myTabWidget.addTab(0, Constants.plot_2, R.drawable.plot_2);
+        myTabWidget.addTab(0, Constants.plot_3, R.drawable.plot_3);
     }
 
     @Override

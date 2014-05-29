@@ -4,16 +4,20 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sfondo_300dpi">
+    android:background="@drawable/story"
+    android:paddingLeft="@dimen/page_padding_left_right"
+    android:paddingRight="@dimen/page_padding_left_right"
+    android:paddingTop="@dimen/page_padding_top_bottom"
+    android:paddingBottom="@dimen/page_padding_top_bottom">
 
     <android.support.v4.app.FragmentTabHost
         android:id="@+id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="25dp">
+        android:layout_weight="1">
 
-        <TabWidget android:id="@android:id/tabs"
+        <TabWidget
+            android:id="@android:id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone" />
@@ -24,14 +28,13 @@
             android:gravity="bottom"
             android:orientation="vertical">
 
-
-
             <FrameLayout
                 android:id="@+id/tabFrameLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
+
     </android.support.v4.app.FragmentTabHost>
 
     <RelativeLayout
@@ -39,8 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_weight="0"
-        android:paddingBottom="25dp">
+        android:layout_weight="0">
 
         <Button
             android:id="@+id/backward"
@@ -48,7 +50,8 @@
             android:layout_width="wrap_content"
             android:background="@drawable/forward"
             android:clickable="true"
-            android:scaleX="-1"/>
+            android:scaleX="-1" />
+
         <Button
             android:id="@+id/forward"
             android:layout_height="wrap_content"

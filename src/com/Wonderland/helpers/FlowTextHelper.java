@@ -15,11 +15,8 @@ import android.widget.TextView;
  */
 public class FlowTextHelper {
 
-    private static boolean mNewClassAvailable;
-
     public static void tryFlowText(String text, View thumbnailView, TextView messageView, Display display) {
         // There is nothing I can do for older versions, so just return
-        if (!mNewClassAvailable) return;
 
         Point displaysize = new Point();
         display.getRealSize(displaysize);
