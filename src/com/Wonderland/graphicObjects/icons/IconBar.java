@@ -13,13 +13,21 @@ import com.Wonderland.main.R;
 
 /**
  * Created by marco on 29/05/14.
+ * <p/>
+ * This class represents the icon bar with all the characters
  */
 public class IconBar extends LinearLayout {
 
     private Context context;
 
+    /**
+     * Buttons to scroll 1 position up or down the list
+     */
     private Button up, down;
 
+    /**
+     * ListView of the icons
+     */
     private ListView listView;
 
 
@@ -73,6 +81,11 @@ public class IconBar extends LinearLayout {
         });
     }
 
+    /**
+     * Execute a scroll to passed position of the listView
+     *
+     * @param position int - element number to which scroll
+     */
     private void executeScroll(final int position) {
         listView.post(new Runnable() {
             public void run() {
@@ -81,17 +94,23 @@ public class IconBar extends LinearLayout {
         });
     }
 
-    public void navigateTo(int position) {
-        listView.smoothScrollToPosition(position);
-    }
-
-
+    /**
+     * Pass a {@link com.Wonderland.graphicObjects.icons.IconAdapter.OnClickListener} to the
+     * listView's iconAdapter
+     *
+     * @param l IconAdapter.OnClickListener
+     */
     public void setOnClickListener(IconAdapter.OnClickListener l) {
         IconAdapter adapter = new IconAdapter(context, 0, Constants.CHARACTERS);
         adapter.setOnClickListener(l);
         listView.setAdapter(adapter);
     }
 
+    /**
+     * Navigate to a passed position
+     *
+     * @param position int - element number to which scroll
+     */
     public void setSelected(int position) {
         executeScroll(position);
     }

@@ -11,10 +11,19 @@ import com.Wonderland.polygon.Polygon;
 
 /**
  * Created by marco on 30/05/14.
+ *
+ * This Activity shows all the locations and bind every characters to it
  */
 public class CharacterMenuActivity extends MyActivity {
 
+    /**
+     * Locations image, {@link com.Wonderland.graphicObjects.MyImageView}
+     */
     private MyImageView locations;
+
+    /**
+     * Array of all the locations
+     */
     private Polygon[] locationsP = Singleton.getInstance().getLocations();
 
     @Override
@@ -23,7 +32,7 @@ public class CharacterMenuActivity extends MyActivity {
         setContentView(R.layout.characters_menu);
 
         locations = (MyImageView) findViewById(R.id.locations);
-        locations.setUp(Constants.LOCATION_BACKGROUND_SIZE);
+        locations.setSize(Constants.LOCATION_BACKGROUND_SIZE);
         locations.setMyOnTouchEvent(new MyImageView.MyOnTouchEvent() {
             @Override
             public void position(int x, int y) {
@@ -49,6 +58,11 @@ public class CharacterMenuActivity extends MyActivity {
 
     }
 
+    /**
+     * Show the pop-up menu with the corrects characters
+     *
+     * @param list
+     */
     private void showMenu(int[] list) {
         Constants.CHARACTERS[list[0]].startApplication(this);
     }

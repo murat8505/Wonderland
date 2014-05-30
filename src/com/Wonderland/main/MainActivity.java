@@ -3,7 +3,6 @@ package com.Wonderland.main;
 import android.os.Bundle;
 
 import com.Wonderland.graphicObjects.MyImageView;
-import com.Wonderland.helpers.Constants;
 import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.helpers.Singleton;
@@ -23,7 +22,6 @@ public class MainActivity extends MyActivity {
 
 
         MyImageView myImageView = (MyImageView) findViewById(R.id.home);
-        myImageView.setUp(Constants.BACKGROUND_SIZE);
         myImageView.setMyOnTouchEvent(new MyImageView.MyOnTouchEvent() {
             @Override
             public void position(int x, int y) {

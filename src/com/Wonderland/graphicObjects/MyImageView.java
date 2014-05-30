@@ -6,6 +6,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.Wonderland.helpers.Constants;
+
 /**
  * Created by marco on 18/04/14.
  * <p/>
@@ -14,7 +16,15 @@ import android.widget.ImageView;
  */
 public class MyImageView extends ImageView {
 
+    /**
+     * Touch listener
+     */
     private MyOnTouchEvent myOnTouchEvent;
+
+    /**
+     * Real size of the background image (default value)
+     */
+    private int[] size = Constants.BACKGROUND_SIZE;
 
     public MyImageView(Context context) {
         super(context);
@@ -32,30 +42,38 @@ public class MyImageView extends ImageView {
     }
 
     private void initialize(Context context) {
-
-    }
-
-    public void setUp(final int[] SIZE) {
-
         final ImageView imageView = this;
 
         this.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
 
-                int touchX = (int) event.getX();
-                int touchY = (int) event.getY();
+                // remove movement events for scrollView
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    int touchX = (int) event.getX();
+                    int touchY = (int) event.getY();
 
-                // Scalo la posizione per ottenere x e y
-                int imageY = touchY * SIZE[1] / imageView.getHeight();
-                int imageX = touchX * SIZE[0] / imageView.getWidth();
+                    // Scalo la posizione per ottenere x e y
+                    int imageY = touchY * size[1] / imageView.getHeight();
+                    int imageX = touchX * size[0] / imageView.getWidth();
 
-                if (myOnTouchEvent != null)
-                    myOnTouchEvent.position(imageX, imageY);
+                    if (myOnTouchEvent != null)
+                        myOnTouchEvent.position(imageX, imageY);
+                }
 
-                return false;
+                // if I don't return true on ACTION_DOWN I will never get ACTION_UP
+                return event.getAction() == MotionEvent.ACTION_DOWN;
             }
         });
+    }
+
+    /**
+     * Set new default size of the background image
+     *
+     * @param size int[], dimensions of the image (x,y)
+     */
+    public void setSize(int[] size) {
+        this.size = size;
     }
 
     /**

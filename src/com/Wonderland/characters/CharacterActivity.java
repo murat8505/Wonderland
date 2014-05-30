@@ -16,19 +16,39 @@ import com.Wonderland.main.R;
 
 /**
  * Created by marco on 29/05/14.
+ * <p/>
+ * Activity to show one {@link com.Wonderland.characters.Character}
  */
 public class CharacterActivity extends MyActivity {
 
+    /**
+     * Character to display, can be changed in every moment
+     */
     private Character character;
 
+    /**
+     * Button to open Wallpaper section
+     */
     private Button gallery;
 
+    /**
+     * Name of the character
+     */
     private MyTextView name;
 
+    /**
+     * Description of the character
+     */
     private TextView description;
 
+    /**
+     * Descriptive image of the character
+     */
     private ImageView characterImage;
 
+    /**
+     * Lateral iconBar {@link com.Wonderland.graphicObjects.icons.IconBar}
+     */
     private IconBar bar;
 
 
@@ -55,6 +75,12 @@ public class CharacterActivity extends MyActivity {
         });
     }
 
+    /**
+     * Change the character and reset all fields of the View.
+     * Can be called in every moment
+     *
+     * @param character Character - character to show
+     */
     private void setCharacter(Character character) {
         this.character = character;
 
@@ -76,6 +102,8 @@ public class CharacterActivity extends MyActivity {
     protected void onStart() {
         super.onStart();
 
+        // If I try to set the first element of the bar in another "moment" scroll position
+        // is incorrect, probably because it isn't been instantiated yet
         int position = getIntent().getIntExtra(Constants.ID, 0);
         setCharacter(Constants.CHARACTERS[position]);
     }

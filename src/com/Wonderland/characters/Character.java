@@ -45,29 +45,55 @@ public class Character {
         this.position = position;
     }
 
-
+    /**
+     * Return the drawable corresponding at the id
+     *
+     * @param context Context
+     * @return Drawable
+     */
     public Drawable getDrawableId(Context context) {
         return context.getResources().getDrawable(drawableId);
     }
 
+    /**
+     * @return String, the name of the character
+     */
     public String getName() {
         return Name;
     }
 
+    /**
+     * @return String, the text description of the character
+     */
     public String getText() {
         return text;
     }
 
+    /**
+     * Return the position in the Array in {@link com.Wonderland.helpers.Constants#CHARACTERS}
+     *
+     * @return int
+     */
     public int getPosition() {
         return position;
     }
 
+    /**
+     * Return the drawable corresponding at the id
+     *
+     * @param context Context
+     * @return Drawable
+     */
     public Drawable getDrawableImage(Context context) {
         return context.getResources().getDrawable(drawableImage);
     }
 
+    /**
+     * Set the parameters and start the corret application, see {@link com.Wonderland.characters.CharacterActivity}
+     *
+     * @param context Context
+     */
     public void startApplication(Context context) {
-
         Intent i = new Intent(context, CharacterActivity.class);
         i.putExtra(Constants.ID, position);
         context.startActivity(i);
