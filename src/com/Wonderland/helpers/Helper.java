@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.MediaMetadataRetriever;
 import android.os.Environment;
 import android.view.View;
 
@@ -55,6 +54,29 @@ public class Helper {
         for (int i = 0; i < coordinates.length; i += 2)
             builder.addVertex(new Point(coordinates[i], coordinates[i + 1]));
 
+        Polygon polygon = builder.build();
+
+        return polygon;
+    }
+
+    /**
+     * Return a Polygon approximating the circle with 48 sides having the passed center
+     * and radius {@link com.Wonderland.helpers.Constants#RADIUS}
+     *
+     * @param coordinates int[x,y]
+     * @return Polygon
+     */
+    public static final Polygon createCircle(int[] coordinates) {
+
+        Polygon.Builder builder = new Polygon.Builder();
+
+        for (double i = 0; i < Math.PI * 2; i += Math.PI / 48) {
+
+            int x = coordinates[0] + (int) (Math.cos(i) * Constants.RADIUS);
+            int y = coordinates[1] + (int) (Math.sin(i) * Constants.RADIUS);
+
+            builder.addVertex(new Point(x, y));
+        }
         Polygon polygon = builder.build();
 
         return polygon;
@@ -145,8 +167,8 @@ public class Helper {
                     int o2_trace = Integer.parseInt(key);
                     */
 
-                    int o_trace = Integer.parseInt(o.getName().substring(0,2));
-                    int o2_trace = Integer.parseInt(o2.getName().substring(0,2));
+                    int o_trace = Integer.parseInt(o.getName().substring(0, 2));
+                    int o2_trace = Integer.parseInt(o2.getName().substring(0, 2));
 
                     return o_trace - o2_trace;
                 }

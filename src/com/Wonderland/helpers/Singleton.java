@@ -13,18 +13,40 @@ import com.Wonderland.polygon.Polygon;
 public class Singleton {
 
     private static Singleton ourInstance = new Singleton();
+
     /**
      * Font used for every title
      */
     private static Typeface pharmacyFont;
+
     /**
      * Polygons of the Main menu buttons
      */
     private Polygon story, characters, extras, shop;
+
     /**
-     * polygons of the flasks menu buttons
+     * Polygons of the flasks menu buttons
      */
     private Polygon[] menuOptions;
+
+    /**
+     * Polygons of all the locations
+     */
+    private Polygon[] locations = {
+            Helper.createCircle(Constants.LAWN),
+            Helper.createCircle(Constants.HALL),
+            Helper.createCircle(Constants.SEA),
+            Helper.createCircle(Constants.WOOD),
+            Helper.createCircle(Constants.BEACH),
+            Helper.createCircle(Constants.W_R_HOUSE),
+            Helper.createCircle(Constants.MEADOW),
+            Helper.createCircle(Constants.M_H_HOUSE),
+            Helper.createCircle(Constants.FOREST),
+            Helper.createCircle(Constants.TULGEY_WOOD),
+            Helper.createCircle(Constants.QUEEN_G),
+            Helper.createCircle(Constants.COURT_H)
+    };
+    ;
 
     private Singleton() {
 
@@ -38,7 +60,6 @@ public class Singleton {
         menuOptions = new Polygon[Constants.MENU_OPTIONS_COORDINATES.length];
         for (int i = 0; i < Constants.MENU_OPTIONS_COORDINATES.length; i++)
             menuOptions[i] = Helper.createPolygon(Constants.MENU_OPTIONS_COORDINATES[i]);
-
     }
 
     public static Singleton getInstance() {
@@ -102,5 +123,14 @@ public class Singleton {
      */
     public Polygon[] getMenuOptions() {
         return menuOptions;
+    }
+
+    /**
+     * Return Locations menu
+     *
+     * @return Polygon
+     */
+    public Polygon[] getLocations() {
+        return locations;
     }
 }

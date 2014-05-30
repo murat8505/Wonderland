@@ -13,4 +13,5 @@
     <string name="connot_open_res">I can\'t open the selected resource.\nI\'m sorry :(</string>
     <string name="audioTitle">Audio</string>
     <string name="close">Close</string>
+    <string name="characters">Characters</string>
 </resources>

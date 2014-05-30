@@ -6,8 +6,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.Wonderland.helpers.Constants;
-
 /**
  * Created by marco on 18/04/14.
  * <p/>
@@ -35,6 +33,10 @@ public class MyImageView extends ImageView {
 
     private void initialize(Context context) {
 
+    }
+
+    public void setUp(final int[] SIZE) {
+
         final ImageView imageView = this;
 
         this.setOnTouchListener(new OnTouchListener() {
@@ -45,8 +47,8 @@ public class MyImageView extends ImageView {
                 int touchY = (int) event.getY();
 
                 // Scalo la posizione per ottenere x e y
-                int imageY = touchY * Constants.BACKGROUND_SIZE[1] / imageView.getHeight();
-                int imageX = touchX * Constants.BACKGROUND_SIZE[0] / imageView.getWidth();
+                int imageY = touchY * SIZE[1] / imageView.getHeight();
+                int imageX = touchX * SIZE[0] / imageView.getWidth();
 
                 if (myOnTouchEvent != null)
                     myOnTouchEvent.position(imageX, imageY);

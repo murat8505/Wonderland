@@ -83,7 +83,8 @@ public class GroupActionBar extends LinearLayout {
      * @param title, String
      */
     public void setText(String title) {
-        ((TextView) this.findViewById(R.id.title)).setText(title);
+        if (title != null)
+            ((TextView) this.findViewById(R.id.title)).setText(title);
     }
 
     /**

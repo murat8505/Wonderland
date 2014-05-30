@@ -37,11 +37,12 @@ public class Character {
     private int drawableImage;
 
 
-    public Character(int drawableId, String text, String name, int drawableImage) {
+    public Character(int position, int drawableId, String text, String name, int drawableImage) {
         this.drawableId = drawableId;
         this.text = text;
         Name = name;
         this.drawableImage = drawableImage;
+        this.position = position;
     }
 
 
@@ -51,6 +52,14 @@ public class Character {
 
     public String getName() {
         return Name;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getPosition() {
+        return position;
     }
 
     public Drawable getDrawableImage(Context context) {

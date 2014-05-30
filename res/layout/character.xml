@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/characters_background">
+
+    <com.Wonderland.graphicObjects.GroupActionBar xmlns:custom="http://schemas.android.com/apk/res/com.Wonderland.main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar"
+        custom:showBackButton="true"
+        custom:showBackButtonText="false"
+        custom:setText="@string/characters"
+        android:id="@+id/menuActionBar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/l1"
+            android:layout_toLeftOf="@+id/bar">
+
+            <com.Wonderland.graphicObjects.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textSize="@dimen/other_title_size"
+                android:textColor="@color/Alice_Title"
+                android:layout_gravity="left" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/description" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:scaleType="fitStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/characterImage"
+            android:layout_below="@+id/l1"
+            android:layout_toLeftOf="@+id/bar"
+            android:layout_gravity="left" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pulsante_gallery"
+            android:id="@+id/galleryButton"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/bar" />
+
+
+        <com.Wonderland.graphicObjects.icons.IconBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/bar" />
+    </RelativeLayout>
+
+</LinearLayout>

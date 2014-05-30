@@ -57,10 +57,9 @@ public class Constants {
 
     /**
      * Size in pixels of the background in menu pages.
-     * It's needed to obtain corret coordinates during touch
+     * It's needed to obtain correct coordinates during touch
      */
     public static final int[] BACKGROUND_SIZE = {480, 703};
-
 
     /**
      * Main menu, coordinates of the "story" arrow
@@ -149,6 +148,52 @@ public class Constants {
 
 
     /**
+     * Size in pixels of the background in characters page.
+     * It's needed to obtain correct coordinates during touch
+     */
+    public static final int[] LOCATION_BACKGROUND_SIZE = {480, 1610};
+
+    /**
+     * Radius in px of every menu
+     */
+    public static final int RADIUS = 61;
+
+    /**
+     * Center point of every menu
+     */
+    public static final int[] LAWN = {110, 84};
+    public static final int[] HALL = {336, 132};
+    public static final int[] SEA = {369, 344};
+    public static final int[] WOOD = {161, 424};
+    public static final int[] BEACH = {357, 553};
+    public static final int[] W_R_HOUSE = {111, 674};
+    public static final int[] MEADOW = {321, 780};
+    public static final int[] M_H_HOUSE = {148, 1027};
+    public static final int[] FOREST = {367, 996};
+    public static final int[] TULGEY_WOOD = {85, 1279};
+    public static final int[] QUEEN_G = {334, 1271};
+    public static final int[] COURT_H = {378, 1494};
+
+    /**
+     * This object binds the locations on the map with the relative characters.
+     * The order is the same showed up for center points (1 -> Lawn, ...)
+     */
+    public static final int[][] LOCATION_ICON_BINDING = {
+            {1, 2, 3, 4},
+            {5},
+            {6},
+            {7},
+            {8, 9, 10},
+            {4, 6, 11},
+            {12, 13, 14, 15},
+            {4, 16, 17, 18},
+            {19},
+            {19, 20, 21},
+            {4, 19, 22, 23, 24},
+            {4, 16, 17, 18, 19, 22, 23, 24, 25}
+    };
+
+    /**
      * Plot text
      * <p/>
      * WARNING!!! Text with /n or other shortcut will not work. Need tests
@@ -210,7 +255,7 @@ public class Constants {
     /**
      * Characters descriptions
      */
-    public static final String[] CHARACTERS_DESCRIPTION = {
+    private static final String[] CHARACTERS_DESCRIPTION = {
             CURIOSITY_1,
             CURIOSITY_1,
             CURIOSITY_1,
@@ -242,7 +287,7 @@ public class Constants {
     /**
      * Characters name
      */
-    public static final String[] CHARACTERS_NAME = {
+    private static final String[] CHARACTERS_NAME = {
             "Alice",
             "Lorina",
             "Dinah",
@@ -275,31 +320,31 @@ public class Constants {
      * List of characters objects
      */
     public static final com.Wonderland.characters.Character[] CHARACTERS = {
-            new Character(R.drawable.icon_alice_1, CHARACTERS_DESCRIPTION[0], CHARACTERS_NAME[0], R.drawable.alice_1),
-            new Character(R.drawable.icon_lorina_2, CHARACTERS_DESCRIPTION[1], CHARACTERS_NAME[1], R.drawable.lorina_2),
-            new Character(R.drawable.icon_dinah_3, CHARACTERS_DESCRIPTION[2], CHARACTERS_NAME[2], R.drawable.dinah_3),
-            new Character(R.drawable.icon_whiterabbit_4, CHARACTERS_DESCRIPTION[3], CHARACTERS_NAME[3], R.drawable.white_rabbit_4),
-            new Character(R.drawable.icon_doorknob_5, CHARACTERS_DESCRIPTION[4], CHARACTERS_NAME[4], R.drawable.door_knob_5),
-            new Character(R.drawable.icon_capt_dodo_6, CHARACTERS_DESCRIPTION[6], CHARACTERS_NAME[6], R.drawable.capt_dodo_6),
-            new Character(R.drawable.icon_tweedledeetweedledum_7, CHARACTERS_DESCRIPTION[7], CHARACTERS_NAME[7], R.drawable.tweedledee_tweedledum_7),
-            new Character(R.drawable.icon_thewalrus_8, CHARACTERS_DESCRIPTION[8], CHARACTERS_NAME[8], R.drawable.walrus_8),
-            new Character(R.drawable.icon_the_carpenter_9, CHARACTERS_DESCRIPTION[9], CHARACTERS_NAME[9], R.drawable.the_carpenter_9),
-            new Character(R.drawable.icon_oysters_10, CHARACTERS_DESCRIPTION[10], CHARACTERS_NAME[10], R.drawable.oysters_10),
-            new Character(R.drawable.icon_billthelizard_11, CHARACTERS_DESCRIPTION[11], CHARACTERS_NAME[11], R.drawable.bill_the_lizard_11),
-            new Character(R.drawable.icon_wingedanimals_12, CHARACTERS_DESCRIPTION[12], CHARACTERS_NAME[12], R.drawable.winged_animals_12),
-            new Character(R.drawable.icon_flowers_13, CHARACTERS_DESCRIPTION[13], CHARACTERS_NAME[13], R.drawable.flowers_13),
-            new Character(R.drawable.icon_caterpillar_14, CHARACTERS_DESCRIPTION[14], CHARACTERS_NAME[14], R.drawable.caterpiller_14),
-            new Character(R.drawable.icon_bird_15, CHARACTERS_DESCRIPTION[15], CHARACTERS_NAME[15], R.drawable.bird_15),
-            new Character(R.drawable.icon_cheshirecat_19, CHARACTERS_DESCRIPTION[16], CHARACTERS_NAME[16], R.drawable.cheshire_cat_16),
-            new Character(R.drawable.icon_madhatter_16, CHARACTERS_DESCRIPTION[17], CHARACTERS_NAME[17], R.drawable.mad_hatter_17),
-            new Character(R.drawable.icon_marchhare_17, CHARACTERS_DESCRIPTION[18], CHARACTERS_NAME[18], R.drawable.march_hare_18),
-            new Character(R.drawable.icon_dormouse_18, CHARACTERS_DESCRIPTION[19], CHARACTERS_NAME[19], R.drawable.dormouse_19),
-            new Character(R.drawable.icon_momeraths_20, CHARACTERS_DESCRIPTION[20], CHARACTERS_NAME[20], R.drawable.mome_raths_20),
-            new Character(R.drawable.icon_strangeanimals_21, CHARACTERS_DESCRIPTION[21], CHARACTERS_NAME[21], R.drawable.strange_animals_21),
-            new Character(R.drawable.icon_cards_22, CHARACTERS_DESCRIPTION[22], CHARACTERS_NAME[22], R.drawable.cards_22),
-            new Character(R.drawable.icon_queen_23, CHARACTERS_DESCRIPTION[23], CHARACTERS_NAME[23], R.drawable.queen_23),
-            new Character(R.drawable.icon_king_24, CHARACTERS_DESCRIPTION[24], CHARACTERS_NAME[24], R.drawable.king_24),
-            new Character(R.drawable.icon_juri_25, CHARACTERS_DESCRIPTION[25], CHARACTERS_NAME[25], R.drawable.juri_25)
+            new Character(0, R.drawable.icon_alice_1, CHARACTERS_DESCRIPTION[0], CHARACTERS_NAME[0], R.drawable.alice_1),
+            new Character(1, R.drawable.icon_lorina_2, CHARACTERS_DESCRIPTION[1], CHARACTERS_NAME[1], R.drawable.lorina_2),
+            new Character(2, R.drawable.icon_dinah_3, CHARACTERS_DESCRIPTION[2], CHARACTERS_NAME[2], R.drawable.dinah_3),
+            new Character(3, R.drawable.icon_whiterabbit_4, CHARACTERS_DESCRIPTION[3], CHARACTERS_NAME[3], R.drawable.white_rabbit_4),
+            new Character(4, R.drawable.icon_doorknob_5, CHARACTERS_DESCRIPTION[4], CHARACTERS_NAME[4], R.drawable.door_knob_5),
+            new Character(5, R.drawable.icon_capt_dodo_6, CHARACTERS_DESCRIPTION[5], CHARACTERS_NAME[5], R.drawable.capt_dodo_6),
+            new Character(6, R.drawable.icon_tweedledeetweedledum_7, CHARACTERS_DESCRIPTION[6], CHARACTERS_NAME[6], R.drawable.tweedledee_tweedledum_7),
+            new Character(7, R.drawable.icon_thewalrus_8, CHARACTERS_DESCRIPTION[7], CHARACTERS_NAME[7], R.drawable.walrus_8),
+            new Character(8, R.drawable.icon_the_carpenter_9, CHARACTERS_DESCRIPTION[8], CHARACTERS_NAME[8], R.drawable.the_carpenter_9),
+            new Character(9, R.drawable.icon_oysters_10, CHARACTERS_DESCRIPTION[9], CHARACTERS_NAME[9], R.drawable.oysters_10),
+            new Character(10, R.drawable.icon_billthelizard_11, CHARACTERS_DESCRIPTION[10], CHARACTERS_NAME[10], R.drawable.bill_the_lizard_11),
+            new Character(11, R.drawable.icon_wingedanimals_12, CHARACTERS_DESCRIPTION[11], CHARACTERS_NAME[11], R.drawable.winged_animals_12),
+            new Character(12, R.drawable.icon_flowers_13, CHARACTERS_DESCRIPTION[12], CHARACTERS_NAME[12], R.drawable.flowers_13),
+            new Character(13, R.drawable.icon_caterpillar_14, CHARACTERS_DESCRIPTION[13], CHARACTERS_NAME[13], R.drawable.caterpiller_14),
+            new Character(14, R.drawable.icon_bird_15, CHARACTERS_DESCRIPTION[14], CHARACTERS_NAME[14], R.drawable.bird_15),
+            new Character(15, R.drawable.icon_cheshirecat_19, CHARACTERS_DESCRIPTION[15], CHARACTERS_NAME[15], R.drawable.cheshire_cat_16),
+            new Character(16, R.drawable.icon_madhatter_16, CHARACTERS_DESCRIPTION[16], CHARACTERS_NAME[16], R.drawable.mad_hatter_17),
+            new Character(17, R.drawable.icon_marchhare_17, CHARACTERS_DESCRIPTION[17], CHARACTERS_NAME[17], R.drawable.march_hare_18),
+            new Character(18, R.drawable.icon_dormouse_18, CHARACTERS_DESCRIPTION[18], CHARACTERS_NAME[18], R.drawable.dormouse_19),
+            new Character(19, R.drawable.icon_momeraths_20, CHARACTERS_DESCRIPTION[19], CHARACTERS_NAME[19], R.drawable.mome_raths_20),
+            new Character(20, R.drawable.icon_strangeanimals_21, CHARACTERS_DESCRIPTION[20], CHARACTERS_NAME[20], R.drawable.strange_animals_21),
+            new Character(21, R.drawable.icon_cards_22, CHARACTERS_DESCRIPTION[21], CHARACTERS_NAME[21], R.drawable.cards_22),
+            new Character(22, R.drawable.icon_queen_23, CHARACTERS_DESCRIPTION[22], CHARACTERS_NAME[22], R.drawable.queen_23),
+            new Character(23, R.drawable.icon_king_24, CHARACTERS_DESCRIPTION[23], CHARACTERS_NAME[23], R.drawable.king_24),
+            new Character(24, R.drawable.icon_juri_25, CHARACTERS_DESCRIPTION[24], CHARACTERS_NAME[24], R.drawable.juri_25)
     };
 
 }

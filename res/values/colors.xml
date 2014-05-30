@@ -2,6 +2,7 @@
 <resources>
 
     <color name="Alice_Title">#730A11</color>
+    <color name="Icon_Background">#80E4E0DD</color>
 
     <color name="White">#FFFFFF</color>
     <color name="Ivory">#FFFFF0</color>
@@ -143,5 +144,5 @@
     <color name="DarkBlue">#00008B</color>
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
-    <color name="Transparent"> #00FFFFFF</color>
+    <color name="Transparent">#00FFFFFF</color>
 </resources>

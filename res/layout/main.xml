@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         custom:setText="@string/app_name"
         custom:showBackButton="false"
-        android:id="@+id/view" />
+        android:id="@+id/menuActionBar" />
 
     <com.Wonderland.graphicObjects.MyImageView
         android:layout_width="match_parent"

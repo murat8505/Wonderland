@@ -1,14 +1,12 @@
 package com.Wonderland.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-import com.Wonderland.graphicObjects.GroupActionBar;
 import com.Wonderland.graphicObjects.MyImageView;
 import com.Wonderland.helpers.Constants;
 import com.Wonderland.helpers.Helper;
+import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.helpers.Singleton;
 
 /**
@@ -16,13 +14,15 @@ import com.Wonderland.helpers.Singleton;
  * <p/>
  * Common Activity for (almost all) menus
  */
-public class MenuActivity extends Activity {
+public class MenuActivity extends MyActivity {
 
     /**
      *
      */
     private Class[] options;
     private Singleton singleton = Singleton.getInstance();
+
+    private int title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +32,9 @@ public class MenuActivity extends Activity {
 
         // get the value to know which menu open
         Intent intent = getIntent();
-        int title = intent.getIntExtra(Constants.TITLE, 0);
+        title = intent.getIntExtra(Constants.TITLE, 0);
 
         options = Constants.MENU_OPTIONS.get(title);
-
-
-        final Activity menu = this;
-
-        GroupActionBar groupActionBar = (GroupActionBar) findViewById(R.id.menuActionBar);
-        groupActionBar.setText(title);
-        groupActionBar.setBackButtonOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Helper.startActivity(menu, MainActivity.class);
-            }
-        });
 
 
         MyImageView myImageView = (MyImageView) findViewById(R.id.menuImageView);
@@ -76,8 +64,12 @@ public class MenuActivity extends Activity {
     }
 
     @Override
-    public void onBackPressed() {
-        // do nothing;
+    public String getActivityTitle() {
+        return getString(title);
     }
 
+    @Override
+    public Class getPreviousActivity() {
+        return MainActivity.class;
+    }
 }
