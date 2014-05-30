@@ -33,15 +33,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.Wonderland.main" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac6c23c5-70bf-4987-ace6-7cc44b923614" name="Default" comment="Bug on">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/characters/Character.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/characters/Character.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/characters/CharacterActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/characters/CharacterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/main/CharacterMenuActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/main/CharacterMenuActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/icons/IconAdapter.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/icons/IconAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/icons/IconBar.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/icons/IconBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/main/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/main/MainActivity.java" />
+    <list default="true" id="ac6c23c5-70bf-4987-ace6-7cc44b923614" name="Default" comment="Bug on flask menu solved.&#10;Bug on Characters menu with ScrollView and touch solved&#10;Added documentation&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/story/AbstractStoryActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/story/AbstractStoryActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/helpers/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/helpers/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/MyImageView.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/MyImageView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Wonderland.iws" />
@@ -125,18 +119,51 @@
       <file leaf-file-name="CharacterMenuActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Wonderland/main/CharacterMenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="990">
-              <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1005">
+              <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <marker date="1401452644724" expanded="true" signature="1774:1868" placeholder="/**...*/" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Wonderland/helpers/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="5235">
+              <caret line="347" column="6" selection-start-line="347" selection-start-column="6" selection-end-line="347" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/Wonderland/helpers/Constants.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.4201183" vertical-offset="520" max-vertical-offset="5235">
-              <caret line="347" column="6" selection-start-line="347" selection-start-column="6" selection-end-line="347" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Wonderland/helpers/MyActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+              <caret line="27" column="75" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractStoryActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/Wonderland/story/AbstractStoryActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36713287" vertical-offset="0" max-vertical-offset="870">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -162,7 +189,6 @@
       <list>
         <option value="$PROJECT_DIR$/res/layout/volume_seekbar.xml" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/main/MyApplication.java" />
-        <option value="$PROJECT_DIR$/src/com/Wonderland/story/AbstractStoryActivity.java" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/helpers/MyLeadingMarginSpan2.java" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/AudioPlayer.java" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/VolumeSeekBar.java" />
@@ -196,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/GroupActionBar.java" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/main/MenuActivity.java" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/helpers/Singleton.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/helpers/Constants.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/helpers/Helper.java" />
@@ -210,7 +235,9 @@
         <option value="$PROJECT_DIR$/src/com/Wonderland/main/CharacterMenuActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/characters_menu.xml" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/characters/Character.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/helpers/MyActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/Wonderland/story/AbstractStoryActivity.java" />
       </list>
     </option>
   </component>
@@ -743,7 +770,11 @@
       <created>1401413999240</created>
       <updated>1401413999240</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Bug on flask menu solved.&#10;Bug on Characters menu with ScrollView and touch solved&#10;Added documentation&#10;">
+      <created>1401452653856</created>
+      <updated>1401452653856</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -800,7 +831,8 @@
     <MESSAGE value="Added missing graphic objects for Story section from previous commit" />
     <MESSAGE value="Started working on Characters section" />
     <MESSAGE value="Almost terminated section Characters. &#10;Missing &quot;pop-up&quot; menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Almost terminated section Characters. &#10;Missing &quot;pop-up&quot; menu" />
+    <MESSAGE value="Bug on flask menu solved.&#10;Bug on Characters menu with ScrollView and touch solved&#10;Added documentation&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug on flask menu solved.&#10;Bug on Characters menu with ScrollView and touch solved&#10;Added documentation&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -821,7 +853,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/Wonderland/graphicObjects/MyImageView.java</url>
-          <line>52</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
@@ -1081,13 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/story/AbstractStoryActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2972028" vertical-offset="0" max-vertical-offset="858">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Wonderland/main/MenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1368421" vertical-offset="177" max-vertical-offset="1035">
@@ -1097,25 +1122,6 @@
             <element signature="e#1832#1833#0" expanded="false" />
             <element signature="e#1888#1889#0" expanded="false" />
             <element signature="e#1929#1930#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3321679" vertical-offset="57" max-vertical-offset="1440">
-          <caret line="80" column="75" selection-start-line="80" selection-start-column="75" selection-end-line="80" selection-end-column="75" />
-          <folding>
-            <element signature="e#366#384#0" expanded="true" />
-            <element signature="e#634#652#0" expanded="true" />
-            <element signature="e#982#1000#0" expanded="true" />
-            <element signature="e#1331#1349#0" expanded="true" />
-            <element signature="e#1683#1701#0" expanded="true" />
-            <element signature="e#2039#2057#0" expanded="true" />
-            <element signature="e#2381#2399#0" expanded="true" />
-            <element signature="e#2726#2744#0" expanded="true" />
-            <element signature="e#3082#3100#0" expanded="true" />
-            <element signature="e#3440#3458#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1211,12 +1217,12 @@
         <state vertical-scroll-proportion="0.6853147" vertical-offset="702" max-vertical-offset="1620">
           <caret line="98" column="43" selection-start-line="98" selection-start-column="43" selection-end-line="98" selection-end-column="43" />
           <folding>
-            <element signature="e#1834#2193#0" expanded="true" />
-            <element signature="e#2182#2183#0" expanded="true" />
-            <element signature="e#2413#2534#0" expanded="true" />
-            <element signature="e#2523#2524#0" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-            <element signature="e#3154#3155#0" expanded="true" />
+            <element signature="e#1839#2198#0" expanded="true" />
+            <element signature="e#2187#2188#0" expanded="true" />
+            <element signature="e#2425#2546#0" expanded="true" />
+            <element signature="e#2535#2536#0" expanded="true" />
+            <element signature="e#3141#3142#0" expanded="true" />
+            <element signature="e#3180#3181#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1226,8 +1232,8 @@
         <state vertical-scroll-proportion="0.8951049" vertical-offset="282" max-vertical-offset="1215">
           <caret line="76" column="70" selection-start-line="76" selection-start-column="70" selection-end-line="76" selection-end-column="70" />
           <folding>
-            <element signature="e#1240#1422#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#1245#1427#0" expanded="true" />
+            <element signature="e#1416#1417#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1245,9 +1251,9 @@
         <state vertical-scroll-proportion="0.4755245" vertical-offset="552" max-vertical-offset="1470">
           <caret line="64" column="83" selection-start-line="64" selection-start-column="83" selection-end-line="64" selection-end-column="83" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1177#2040#0" expanded="true" />
-            <element signature="e#2029#2030#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1152#2015#0" expanded="true" />
+            <element signature="e#2004#2005#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1279,34 +1285,53 @@
           <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
-            <element signature="e#1307#1308#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/helpers/MyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66433567" vertical-offset="0" max-vertical-offset="858">
-          <caret line="45" column="113" selection-start-line="45" selection-start-column="113" selection-end-line="45" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Wonderland/main/CharacterMenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="990">
-          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1005">
+          <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1401452644724" expanded="true" signature="1774:1868" placeholder="/**...*/" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Wonderland/helpers/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.4201183" vertical-offset="520" max-vertical-offset="5235">
+        <state vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="5235">
           <caret line="347" column="6" selection-start-line="347" selection-start-column="6" selection-end-line="347" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/helpers/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="27" column="75" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/story/AbstractStoryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36713287" vertical-offset="0" max-vertical-offset="870">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding />
         </state>
       </provider>

@@ -1,6 +1,8 @@
 package com.Wonderland.helpers;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
 import android.view.View;
 
 import com.Wonderland.graphicObjects.GroupActionBar;
@@ -18,6 +20,13 @@ public abstract class MyActivity extends Activity {
      */
     public Activity activity = this;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // fix screen orientation
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
 
     @Override
     protected void onStart() {
