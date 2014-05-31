@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="Alice_Title">#730A11</color>
-    <color name="Icon_Background">#80E4E0DD</color>
+    <color name="Alice_Title">#740A11</color>
+    <color name="Icon_Background">#99E4E0DD</color>
+    <color name="icon_and_name_divider">#80D9D5D2</color>
+    <color name="icon_and_name_background">#D8E4E0DD</color>
 
     <color name="White">#FFFFFF</color>
     <color name="Ivory">#FFFFF0</color>

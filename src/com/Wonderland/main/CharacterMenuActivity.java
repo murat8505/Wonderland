@@ -70,6 +70,7 @@ public class CharacterMenuActivity extends MyActivity {
         arrayAdapter = new CharacterArrayAdapter(this, R.layout.characters_listview_row);
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(arrayAdapter);
+        listView.setDivider(getResources().getDrawable(R.drawable.listview_divider));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -110,7 +111,7 @@ public class CharacterMenuActivity extends MyActivity {
 
         if (list.length > 4) {
             ViewGroup.LayoutParams l = listView.getLayoutParams();
-            int height = (int) (4 * getResources().getDimension(R.dimen.icon_row));
+            int height = (int) (4.5 * getResources().getDimension(R.dimen.icon_row));
             l.height = height;
         }
 
