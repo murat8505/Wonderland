@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/characters_background">
 
-    <com.Wonderland.graphicObjects.GroupActionBar xmlns:custom="http://schemas.android.com/apk/res/com.Wonderland.main"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/action_bar"
-        custom:showBackButton="true"
-        custom:showBackButtonText="true"
-        custom:setText="@string/characters"
-        android:id="@+id/menuActionBar" />
+        android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.Wonderland.graphicObjects.MyImageView
+        <com.Wonderland.graphicObjects.GroupActionBar xmlns:custom="http://schemas.android.com/apk/res/com.Wonderland.main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/locations"
-            android:id="@+id/locations" />
+            android:layout_height="@dimen/action_bar"
+            custom:showBackButton="true"
+            custom:showBackButtonText="true"
+            custom:setText="@string/characters"
+            android:id="@+id/menuActionBar" />
 
-    </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <com.Wonderland.graphicObjects.MyImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/locations"
+                android:id="@+id/locations" />
 
-</LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

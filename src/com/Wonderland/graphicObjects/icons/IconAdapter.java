@@ -53,7 +53,7 @@ public class IconAdapter extends ArrayAdapter<com.Wonderland.characters.Characte
             }
         });
 
-        imageView.setImageDrawable(characters[position].getDrawableId(context));
+        imageView.setImageDrawable(characters[position].getDrawableIcon(context));
         imageView.setScaleType(ImageView.ScaleType.CENTER);
 
         return row;

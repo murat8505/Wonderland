@@ -1,7 +1,13 @@
 package com.Wonderland.main;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
+import com.Wonderland.graphicObjects.CharacterArrayAdapter;
 import com.Wonderland.graphicObjects.MyImageView;
 import com.Wonderland.helpers.Constants;
 import com.Wonderland.helpers.Helper;
@@ -26,6 +32,24 @@ public class CharacterMenuActivity extends MyActivity {
      */
     private Polygon[] locationsP = Singleton.getInstance().getLocations();
 
+    /**
+     * ArrayAdapter of the ListView that show the characters found in every place
+     */
+    private CharacterArrayAdapter arrayAdapter;
+
+    /**
+     * ListView of the icons
+     */
+    private ListView listView;
+
+    private MyImageView.MyOnTouchEvent event = new MyImageView.MyOnTouchEvent() {
+
+        @Override
+        public void position(int x, int y) {
+            findButtonPressed(x, y);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +57,28 @@ public class CharacterMenuActivity extends MyActivity {
 
         locations = (MyImageView) findViewById(R.id.locations);
         locations.setSize(Constants.LOCATION_BACKGROUND_SIZE);
-        locations.setMyOnTouchEvent(new MyImageView.MyOnTouchEvent() {
+        locations.setMyOnTouchEvent(event);
+        prepareListView();
+    }
+
+    /**
+     * Initialize the ListView and the ArrayAdapter with an empty array.
+     * Also set the onItemClickListener to open the correct activity
+     */
+    private void prepareListView() {
+
+        arrayAdapter = new CharacterArrayAdapter(this, R.layout.characters_listview_row);
+        listView = (ListView) findViewById(R.id.listView);
+        listView.setAdapter(arrayAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void position(int x, int y) {
-                findButtonPressed(x, y);
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                arrayAdapter.getItem(i).startApplication(activity);
             }
         });
     }
+
 
     /**
      * This is the method called from the onTouchListener on the background menu.
@@ -61,10 +100,44 @@ public class CharacterMenuActivity extends MyActivity {
     /**
      * Show the pop-up menu with the corrects characters
      *
-     * @param list
+     * @param list int[], list of ids of the corresponding Characters objects.
+     *             {@link com.Wonderland.helpers.Constants#CHARACTERS},
+     *             {@link com.Wonderland.helpers.Constants#LOCATION_ICON_BINDING}
+     *
      */
     private void showMenu(int[] list) {
-        Constants.CHARACTERS[list[0]].startApplication(this);
+
+
+        if (list.length > 4) {
+            ViewGroup.LayoutParams l = listView.getLayoutParams();
+            int height = (int) (4 * getResources().getDimension(R.dimen.icon_row));
+            l.height = height;
+        }
+
+
+        for (int i = 0; i < list.length; i++)
+            arrayAdapter.add(Constants.CHARACTERS[list[i]]);
+
+        arrayAdapter.notifyDataSetChanged();
+
+        locations.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent e) {
+
+                // clear the arrayAdapter and restore the touchEvent
+                resetListView();
+                locations.setMyOnTouchEvent(event);
+
+                return false;
+            }
+        });
+    }
+
+    private void resetListView() {
+        arrayAdapter.clear();
+        ViewGroup.LayoutParams l = listView.getLayoutParams();
+        int height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        l.height = height;
     }
 
     @Override
@@ -75,5 +148,10 @@ public class CharacterMenuActivity extends MyActivity {
     @Override
     public Class getPreviousActivity() {
         return MainActivity.class;
+    }
+
+    @Override
+    public void onBackPressed() {
+        resetListView();
     }
 }

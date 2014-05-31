@@ -28,20 +28,20 @@ public class MyImageView extends ImageView {
 
     public MyImageView(Context context) {
         super(context);
-        initialize(context);
+        initialize();
     }
 
     public MyImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initialize(context);
+        initialize();
     }
 
     public MyImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        initialize(context);
+        initialize();
     }
 
-    private void initialize(Context context) {
+    private void initialize() {
         final ImageView imageView = this;
 
         this.setOnTouchListener(new OnTouchListener() {
@@ -67,6 +67,10 @@ public class MyImageView extends ImageView {
         });
     }
 
+    private void setOnTouchListener() {
+
+    }
+
     /**
      * Set new default size of the background image
      *
@@ -83,6 +87,8 @@ public class MyImageView extends ImageView {
      */
     public void setMyOnTouchEvent(MyOnTouchEvent myOnTouchEvent) {
         this.myOnTouchEvent = myOnTouchEvent;
+
+        initialize();
     }
 
     /**

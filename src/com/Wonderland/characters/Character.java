@@ -51,7 +51,7 @@ public class Character {
      * @param context Context
      * @return Drawable
      */
-    public Drawable getDrawableId(Context context) {
+    public Drawable getDrawableIcon(Context context) {
         return context.getResources().getDrawable(drawableId);
     }
 

@@ -12,5 +12,7 @@
     <dimen name="page_padding_top_bottom">30px</dimen>
     <dimen name="page_padding_left_right">52px</dimen>
     <dimen name="icon_button_top_bottom">20dp</dimen>
+    <dimen name="icon_row">60dp</dimen>
+
 
 </resources>
