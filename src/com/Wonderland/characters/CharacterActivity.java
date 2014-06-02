@@ -6,10 +6,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.Wonderland.graphicObjects.IconAdapter;
+import com.Wonderland.graphicObjects.IconBar;
 import com.Wonderland.graphicObjects.MyTextView;
-import com.Wonderland.graphicObjects.icons.IconAdapter;
-import com.Wonderland.graphicObjects.icons.IconBar;
 import com.Wonderland.helpers.Constants;
+import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.main.CharacterMenuActivity;
 import com.Wonderland.main.R;
@@ -47,7 +48,7 @@ public class CharacterActivity extends MyActivity {
     private ImageView characterImage;
 
     /**
-     * Lateral iconBar {@link com.Wonderland.graphicObjects.icons.IconBar}
+     * Lateral iconBar {@link com.Wonderland.graphicObjects.IconBar}
      */
     private IconBar bar;
 
@@ -114,7 +115,7 @@ public class CharacterActivity extends MyActivity {
     }
 
     @Override
-    public Class getPreviousActivity() {
-        return CharacterMenuActivity.class;
+    public void onBack() {
+        Helper.startActivity(this, CharacterMenuActivity.class);
     }
 }

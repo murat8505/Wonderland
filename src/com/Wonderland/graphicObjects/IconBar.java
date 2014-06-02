@@ -1,4 +1,4 @@
-package com.Wonderland.graphicObjects.icons;
+package com.Wonderland.graphicObjects;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -95,13 +95,13 @@ public class IconBar extends LinearLayout {
     }
 
     /**
-     * Pass a {@link com.Wonderland.graphicObjects.icons.IconAdapter.OnClickListener} to the
+     * Pass a {@link com.Wonderland.graphicObjects.IconAdapter.OnClickListener} to the
      * listView's iconAdapter
      *
      * @param l IconAdapter.OnClickListener
      */
     public void setOnClickListener(IconAdapter.OnClickListener l) {
-        IconAdapter adapter = new IconAdapter(context, 0, Constants.CHARACTERS);
+        IconAdapter adapter = new IconAdapter(context, R.layout.icon_element, Constants.CHARACTERS);
         adapter.setOnClickListener(l);
         listView.setAdapter(adapter);
     }

@@ -17,7 +17,7 @@ import com.Wonderland.polygon.Polygon;
 
 /**
  * Created by marco on 30/05/14.
- *
+ * <p/>
  * This Activity shows all the locations and bind every characters to it
  */
 public class CharacterMenuActivity extends MyActivity {
@@ -104,7 +104,6 @@ public class CharacterMenuActivity extends MyActivity {
      * @param list int[], list of ids of the corresponding Characters objects.
      *             {@link com.Wonderland.helpers.Constants#CHARACTERS},
      *             {@link com.Wonderland.helpers.Constants#LOCATION_ICON_BINDING}
-     *
      */
     private void showMenu(int[] list) {
 
@@ -147,8 +146,8 @@ public class CharacterMenuActivity extends MyActivity {
     }
 
     @Override
-    public Class getPreviousActivity() {
-        return MainActivity.class;
+    public void onBack() {
+        Helper.startActivity(this, MainActivity.class);
     }
 
     @Override

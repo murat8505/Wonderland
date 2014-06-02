@@ -1,47 +1,42 @@
 package com.Wonderland.graphicObjects;
 
+import android.app.Activity;
 import android.content.Context;
 import android.media.AudioManager;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 
 import com.Wonderland.main.R;
 
 /**
- * Created by marco on 22/04/14.
- * </br>
- * Stand alone volume bar.
- * </br>
- * It's a seekBar which control the STREAM_MUSIC volume.
- * It has an Handler which verifies every 100ms the volume level to maintain consistency with
- * changes using hw buttons
+ * Created by marco on 02/06/14.
  */
-public class VolumeSeekBar extends RelativeLayout {
+public class BrightnessSeekBar extends RelativeLayout {
 
     private AudioManager audioManager;
-    private int streamType = AudioManager.STREAM_MUSIC;
 
     /**
-     * Looper to control changes in volume
+     * Looper to control changes in brightness
      */
     private Handler handler = new Handler(Looper.getMainLooper());
 
 
-    public VolumeSeekBar(Context context) {
+    public BrightnessSeekBar(Context context) {
         super(context);
         initialize(context);
     }
 
-    public VolumeSeekBar(Context context, AttributeSet attrs) {
+    public BrightnessSeekBar(Context context, AttributeSet attrs) {
         super(context, attrs);
         initialize(context);
     }
 
-    public VolumeSeekBar(Context context, AttributeSet attrs, int defStyle) {
+    public BrightnessSeekBar(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         initialize(context);
     }
@@ -49,34 +44,35 @@ public class VolumeSeekBar extends RelativeLayout {
     private void initialize(final Context context) {
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.volume_seekbar, this, true);
-
-        audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+        inflater.inflate(R.layout.brightness_seekbar, this, true);
 
         final SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
 
-        // set max volume on the seekbar
-        int max_volume = audioManager.getStreamMaxVolume(streamType);
-        seekBar.setMax(max_volume);
+        final WindowManager.LayoutParams layout = ((Activity) context).getWindow().getAttributes();
+
+        // set max value on the seekbar
+        seekBar.setMax(255);
 
 
         // start control cycle on the volume level
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                seekBar.setProgress(audioManager.getStreamVolume(streamType));
+
+                float prevBrightness = layout.screenBrightness;
+                seekBar.setProgress((int) prevBrightness);
 
                 handler.postDelayed(this, 100);
             }
         }, 100);
 
-        //l listener to change volume on user touch
+        //l listener to change brightness on user touch
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, final int i, boolean b) {
-
-                audioManager.setStreamVolume(streamType, i, 0);
+                layout.screenBrightness = i;
+                ((Activity) context).getWindow().setAttributes(layout);
             }
 
             @Override

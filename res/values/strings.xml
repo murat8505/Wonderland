@@ -14,4 +14,7 @@
     <string name="audioTitle">Audio</string>
     <string name="close">Close</string>
     <string name="characters">Characters</string>
+    <string name="videoTitle">Video</string>
+    <string name="wallpaperTitle">Wallpaper</string>
+    <string name="share">Share</string>
 </resources>

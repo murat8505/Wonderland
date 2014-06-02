@@ -10,7 +10,8 @@
         android:id="@+id/playOrPause"
         android:layout_gravity="center_vertical"
         android:background="@null"
-        android:src="@drawable/play"/>
+        android:src="@drawable/play"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="wrap_content"

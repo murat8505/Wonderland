@@ -9,7 +9,7 @@ import com.Wonderland.story.AbstractStoryActivity;
  * <p/>
  * Strangeness section
  */
-public class Strangeness extends AbstractStoryActivity {
+public class StrangenessActivity extends AbstractStoryActivity {
 
     @Override
     public void setData() {

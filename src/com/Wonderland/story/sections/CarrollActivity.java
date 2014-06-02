@@ -9,7 +9,7 @@ import com.Wonderland.story.AbstractStoryActivity;
  * <p/>
  * Carroll section
  */
-public class Carroll extends AbstractStoryActivity {
+public class CarrollActivity extends AbstractStoryActivity {
 
     @Override
     public void setData() {

@@ -39,7 +39,7 @@ public abstract class MyActivity extends Activity {
         groupActionBar.setBackButtonOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Helper.startActivity(activity, getPreviousActivity());
+                onBack();
             }
         });
     }
@@ -54,7 +54,7 @@ public abstract class MyActivity extends Activity {
      * @return class, the activity to which return, or null if it isn't.
      * {@link com.Wonderland.graphicObjects.GroupActionBar#setOnClickListener(android.view.View.OnClickListener)}
      */
-    public abstract Class getPreviousActivity();
+    public abstract void onBack();
 
     @Override
     public void onBackPressed() {

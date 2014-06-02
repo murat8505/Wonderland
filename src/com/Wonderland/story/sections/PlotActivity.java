@@ -9,7 +9,7 @@ import com.Wonderland.story.AbstractStoryActivity;
  * <p/>
  * Plot section
  */
-public class Plot extends AbstractStoryActivity {
+public class PlotActivity extends AbstractStoryActivity {
 
     @Override
     public void setData() {

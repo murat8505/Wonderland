@@ -6,12 +6,25 @@
     android:layout_height="match_parent"
     android:padding="20dp">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/audio_item"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/extraPreview" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gallery_play_button"
+            android:id="@+id/extraPreviewPlayButton"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
 
     <com.Wonderland.graphicObjects.MyTextView
         android:layout_width="wrap_content"

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/story"
+    android:background="@drawable/story_background"
     android:paddingLeft="@dimen/page_padding_left_right"
     android:paddingRight="@dimen/page_padding_left_right"
     android:paddingTop="@dimen/page_padding_top_bottom"

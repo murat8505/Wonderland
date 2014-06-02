@@ -57,8 +57,8 @@ public class MainActivity extends MyActivity {
     }
 
     @Override
-    public Class getPreviousActivity() {
-        return null;
+    public void onBack() {
+
     }
 
     @Override

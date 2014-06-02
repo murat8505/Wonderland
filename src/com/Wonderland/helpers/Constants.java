@@ -2,11 +2,13 @@ package com.Wonderland.helpers;
 
 
 import com.Wonderland.characters.Character;
-import com.Wonderland.extras.Audio;
+import com.Wonderland.extras.sections.AudioActivity;
+import com.Wonderland.extras.sections.VideoActivity;
+import com.Wonderland.extras.sections.WallPaperActivity;
 import com.Wonderland.main.R;
-import com.Wonderland.story.sections.Carroll;
-import com.Wonderland.story.sections.Plot;
-import com.Wonderland.story.sections.Strangeness;
+import com.Wonderland.story.sections.CarrollActivity;
+import com.Wonderland.story.sections.PlotActivity;
+import com.Wonderland.story.sections.StrangenessActivity;
 
 import java.util.Hashtable;
 
@@ -52,6 +54,7 @@ public class Constants {
     public static final String TITLE = "title";
     public static final String AUDIO = "audio";
     public static final String VIDEO = "video";
+    public static final String WALLPAPER = "wallpaper";
     public static final String ID = "id";
 
 
@@ -109,11 +112,11 @@ public class Constants {
     /**
      * Array of class objects, needed to forward Main menu buttons
      */
-    private static final Class[] STORY_OPTIONS = {Plot.class, Carroll.class, Strangeness.class};
+    private static final Class[] STORY_OPTIONS = {PlotActivity.class, CarrollActivity.class, StrangenessActivity.class};
     /**
      * Array of class objects, needed to forward Extras menu buttons
      */
-    private static final Class[] EXTRAS_OPTIONS = {Plot.class, Audio.class, Strangeness.class};
+    private static final Class[] EXTRAS_OPTIONS = {VideoActivity.class, AudioActivity.class, WallPaperActivity.class};
 
     /**
      * Hashtable of menu options

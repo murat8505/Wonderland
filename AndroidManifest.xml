@@ -5,7 +5,9 @@
     android:versionName="1.0">
 
     <uses-sdk android:minSdkVersion="17" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
         android:label="@string/app_name"
@@ -33,7 +35,7 @@
         </activity>
 
         <activity
-            android:name="com.Wonderland.story.sections.Plot"
+            android:name="com.Wonderland.story.sections.PlotActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -42,7 +44,7 @@
         </activity>
 
         <activity
-            android:name="com.Wonderland.story.sections.Carroll"
+            android:name="com.Wonderland.story.sections.CarrollActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -51,7 +53,7 @@
         </activity>
 
         <activity
-            android:name="com.Wonderland.story.sections.Strangeness"
+            android:name="com.Wonderland.story.sections.StrangenessActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -60,7 +62,7 @@
         </activity>
 
         <activity
-            android:name="com.Wonderland.extras.Audio"
+            android:name="com.Wonderland.extras.sections.AudioActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -69,7 +71,25 @@
         </activity>
 
         <activity
-            android:name="com.Wonderland.extras.AudioRep"
+            android:name="com.Wonderland.extras.sections.VideoActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.Wonderland.extras.sections.WallPaperActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.Wonderland.extras.PlayerActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -88,6 +108,15 @@
 
         <activity
             android:name="com.Wonderland.characters.CharacterActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.Wonderland.extras.WallPaperViewActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

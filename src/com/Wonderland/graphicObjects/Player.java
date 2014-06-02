@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.Wonderland.helpers.Helper;
 import com.Wonderland.main.R;
@@ -37,8 +38,9 @@ public class Player extends LinearLayout {
      */
     private SeekBar seekBar;
 
-    private MediaPlayer player;
-    private String afd;
+    private String path;
+
+    private VideoView video;
 
     private Context context;
 
@@ -53,8 +55,8 @@ public class Player extends LinearLayout {
         @Override
         public void run() {
 
-            long totalDuration = player.getDuration();
-            long currentDuration = player.getCurrentPosition();
+            long totalDuration = video.getDuration();
+            long currentDuration = video.getCurrentPosition();
 
             timePassed.setText("" + Helper.milliSecondsToTimer(currentDuration));
 
@@ -69,6 +71,7 @@ public class Player extends LinearLayout {
             handler.postDelayed(this, 100);
         }
     };
+
 
     public Player(Context context) {
         super(context);
@@ -90,15 +93,12 @@ public class Player extends LinearLayout {
         this.context = context;
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.audio_player, this, true);
+        inflater.inflate(R.layout.player, this, true);
 
         playOrPause = (ImageButton) findViewById(R.id.playOrPause);
         timePassed = (TextView) findViewById(R.id.timePassed);
         timeRemaining = (TextView) findViewById(R.id.timeRemaining);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
-
-        player = new MediaPlayer();
-
 
         seekBar.setProgress(0);
         seekBar.setMax(100);
@@ -120,11 +120,11 @@ public class Player extends LinearLayout {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 handler.removeCallbacks(mUpdateTimeTask);
 
-                int totalDuration = player.getDuration();
+                int totalDuration = video.getDuration();
                 int currentPosition = Helper.progressToTimer(seekBar.getProgress(), totalDuration);
 
                 // forward or backward to certain seconds
-                player.seekTo(currentPosition);
+                video.seekTo(currentPosition);
 
                 // update timer progress again
                 updateSeekBar();
@@ -134,7 +134,7 @@ public class Player extends LinearLayout {
         playOrPause.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (player.isPlaying())
+                if (video.isPlaying())
                     pause();
                 else
                     resume();
@@ -142,15 +142,6 @@ public class Player extends LinearLayout {
         });
 
         handler = new Handler(Looper.getMainLooper());
-
-        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer player) {
-                pause();
-                seekBar.setProgress(0);
-                player.seekTo(0);
-            }
-        });
     }
 
     /**
@@ -161,13 +152,24 @@ public class Player extends LinearLayout {
     }
 
     /**
-     * set File to play from assets
+     * set the path of the file to play, and the VideoView
      *
-     * @param file, String - complete path
+     * @param path,  String - complete path
+     * @param video, VideoView
      */
-    public void setFile(String file) {
+    public void setFile(String path, VideoView video) {
+        this.path = path;
+        this.video = video;
 
-        this.afd = file;
+        video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer player) {
+                pause();
+                seekBar.setProgress(0);
+                player.seekTo(0);
+            }
+        });
+
         play();
     }
 
@@ -177,10 +179,7 @@ public class Player extends LinearLayout {
     private void play() {
 
         try {
-
-            player.reset();
-            player.setDataSource(afd);
-            player.prepare();
+            video.setVideoPath(path);
 
             resume();
 
@@ -193,7 +192,7 @@ public class Player extends LinearLayout {
      * Resume playing
      */
     private void resume() {
-        player.start();
+        video.start();
 
         playOrPause.setImageResource(R.drawable.pause);
 
@@ -204,7 +203,7 @@ public class Player extends LinearLayout {
      * Pause playing
      */
     public void pause() {
-        player.pause();
+        video.pause();
         playOrPause.setImageResource(R.drawable.play);
 
         handler.removeCallbacks(mUpdateTimeTask);
@@ -216,12 +215,9 @@ public class Player extends LinearLayout {
      */
     public void release() {
 
-        player.stop();
-        player.reset();
+        video.stopPlayback();
         handler.removeCallbacks(mUpdateTimeTask);
 
 
     }
-
-
 }

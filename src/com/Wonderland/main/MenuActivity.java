@@ -69,7 +69,7 @@ public class MenuActivity extends MyActivity {
     }
 
     @Override
-    public Class getPreviousActivity() {
-        return MainActivity.class;
+    public void onBack() {
+        Helper.startActivity(this, MainActivity.class);
     }
 }
