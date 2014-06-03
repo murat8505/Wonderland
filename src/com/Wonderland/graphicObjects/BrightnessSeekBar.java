@@ -1,12 +1,16 @@
 package com.Wonderland.graphicObjects;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
-import android.media.AudioManager;
 import android.os.Handler;
 import android.os.Looper;
+import android.provider.Settings;
+import android.provider.Settings.System;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
@@ -18,7 +22,7 @@ import com.Wonderland.main.R;
  */
 public class BrightnessSeekBar extends RelativeLayout {
 
-    private AudioManager audioManager;
+    private int brightness;
 
     /**
      * Looper to control changes in brightness
@@ -52,17 +56,30 @@ public class BrightnessSeekBar extends RelativeLayout {
 
         // set max value on the seekbar
         seekBar.setMax(255);
+        seekBar.setKeyProgressIncrement(1);
 
+        //Get the content resolver
+        final ContentResolver cResolver = context.getContentResolver();
+
+        //Get the current window
+        final Window window = ((Activity) context).getWindow();
 
         // start control cycle on the volume level
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                float prevBrightness = layout.screenBrightness;
-                seekBar.setProgress((int) prevBrightness);
+                try {
+                    brightness = System.getInt(cResolver, System.SCREEN_BRIGHTNESS);
+                    seekBar.setProgress(brightness);
+                    handler.postDelayed(this, 100);
 
-                handler.postDelayed(this, 100);
+                } catch (Settings.SettingNotFoundException e) {
+                    e.printStackTrace();
+                    Log.e("Error", "Cannot access system brightness");
+                }
+
+
             }
         }, 100);
 
@@ -70,9 +87,17 @@ public class BrightnessSeekBar extends RelativeLayout {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
-            public void onProgressChanged(SeekBar seekBar, final int i, boolean b) {
-                layout.screenBrightness = i;
-                ((Activity) context).getWindow().setAttributes(layout);
+            public void onProgressChanged(SeekBar seekBar, final int progress, boolean b) {
+                //Set the minimal brightness level
+                //if seek bar is 20 or any value below
+                if (progress <= 20) {
+                    //Set the brightness to 20
+                    brightness = 20;
+                } else //brightness is greater than 20
+                {
+                    //Set brightness variable based on the progress bar
+                    brightness = progress;
+                }
             }
 
             @Override
@@ -83,6 +108,14 @@ public class BrightnessSeekBar extends RelativeLayout {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
+                //Set the system brightness using the brightness variable value
+                System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness);
+                //Get the current window attributes
+                WindowManager.LayoutParams layoutpars = window.getAttributes();
+                //Set the brightness of this window
+                layoutpars.screenBrightness = brightness / (float) 255;
+                //Apply attribute changes to this window
+                window.setAttributes(layoutpars);
             }
         });
 
