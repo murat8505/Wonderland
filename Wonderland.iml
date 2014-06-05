@@ -17,6 +17,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="android-support-v4" level="project" />
     <orderEntry type="library" name="android-support-v7-appcompat" level="project" />
+    <orderEntry type="library" name="universal-image-loader-1.9.2" level="project" />
   </component>
 </module>
 

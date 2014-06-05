@@ -6,6 +6,9 @@ import com.Wonderland.graphicObjects.MyImageView;
 import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.helpers.Singleton;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 /**
  * MainActivity
@@ -28,6 +31,15 @@ public class MainActivity extends MyActivity {
                 findButtonPressed(x, y);
             }
         });
+
+        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
+                .cacheInMemory(true)
+                .build();
+
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
+                .defaultDisplayImageOptions(defaultOptions)
+                .build();
+        ImageLoader.getInstance().init(config);
     }
 
 
@@ -47,18 +59,13 @@ public class MainActivity extends MyActivity {
         else if (Helper.testPointInPolygon(x, y, singleton.getExtras()))
             Helper.startMenuActivity(this, R.string.extras);
         else if (Helper.testPointInPolygon(x, y, singleton.getShop()))
-            Helper.showLazyAlertDialog(this);
+            Helper.startMenuActivity(this, R.string.shop);
     }
 
 
     @Override
     public String getActivityTitle() {
         return null;
-    }
-
-    @Override
-    public void onBack() {
-
     }
 
     @Override

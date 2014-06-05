@@ -98,6 +98,16 @@ public class BrightnessSeekBar extends RelativeLayout {
                     //Set brightness variable based on the progress bar
                     brightness = progress;
                 }
+
+                //Set the system brightness using the brightness variable value
+                System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness);
+                //Get the current window attributes
+                WindowManager.LayoutParams layoutpars = window.getAttributes();
+                //Set the brightness of this window
+                layoutpars.screenBrightness = brightness / (float) 255;
+                //Apply attribute changes to this window
+                window.setAttributes(layoutpars);
+
             }
 
             @Override
@@ -108,14 +118,7 @@ public class BrightnessSeekBar extends RelativeLayout {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
-                //Set the system brightness using the brightness variable value
-                System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness);
-                //Get the current window attributes
-                WindowManager.LayoutParams layoutpars = window.getAttributes();
-                //Set the brightness of this window
-                layoutpars.screenBrightness = brightness / (float) 255;
-                //Apply attribute changes to this window
-                window.setAttributes(layoutpars);
+
             }
         });
 

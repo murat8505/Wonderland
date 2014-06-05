@@ -30,6 +30,11 @@ public class Singleton {
     private Polygon[] menuOptions;
 
     /**
+     * Polygons of the clothing menu buttons
+     */
+    private Polygon[] clothingMenuOptions;
+
+    /**
      * Polygons of all the locations
      */
     private Polygon[] locations = {
@@ -60,6 +65,10 @@ public class Singleton {
         menuOptions = new Polygon[Constants.MENU_OPTIONS_COORDINATES.length];
         for (int i = 0; i < Constants.MENU_OPTIONS_COORDINATES.length; i++)
             menuOptions[i] = Helper.createPolygon(Constants.MENU_OPTIONS_COORDINATES[i]);
+
+        clothingMenuOptions = new Polygon[Constants.MENU_CLOTHING_COORDINATES.length];
+        for (int i = 0; i < Constants.MENU_CLOTHING_COORDINATES.length; i++)
+            clothingMenuOptions[i] = Helper.createPolygon(Constants.MENU_CLOTHING_COORDINATES[i]);
     }
 
     public static Singleton getInstance() {
@@ -132,5 +141,14 @@ public class Singleton {
      */
     public Polygon[] getLocations() {
         return locations;
+    }
+
+    /**
+     * Return Clothing menu polygons
+     *
+     * @return Polygon
+     */
+    public Polygon[] getClothingMenuOptions() {
+        return clothingMenuOptions;
     }
 }

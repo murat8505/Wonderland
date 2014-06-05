@@ -146,11 +146,6 @@ public class CharacterMenuActivity extends MyActivity {
     }
 
     @Override
-    public void onBack() {
-        Helper.startActivity(this, MainActivity.class);
-    }
-
-    @Override
     public void onBackPressed() {
         resetListView();
     }

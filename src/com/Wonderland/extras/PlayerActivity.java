@@ -58,11 +58,6 @@ public class PlayerActivity extends MyActivity {
         return null;
     }
 
-    @Override
-    public void onBack() {
-
-    }
-
     private void setAudioMode(String path) {
 
         findViewById(R.id.brightness).setVisibility(View.GONE);

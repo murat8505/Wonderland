@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.Wonderland.extras.sections.WallPaperActivity;
 import com.Wonderland.helpers.Constants;
-import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.main.R;
 
@@ -43,11 +41,6 @@ public class WallPaperViewActivity extends MyActivity {
     @Override
     public String getActivityTitle() {
         return getString(R.string.wallpaperTitle);
-    }
-
-    @Override
-    public void onBack() {
-        Helper.startActivity(this, WallPaperActivity.class);
     }
 
 }

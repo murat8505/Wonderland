@@ -22,7 +22,7 @@ import java.util.List;
  */
 public abstract class AbstractGridViewActivity extends MyActivity {
 
-    private GridView gridView;
+    protected GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +67,4 @@ public abstract class AbstractGridViewActivity extends MyActivity {
         });
     }
 
-    @Override
-    public void onBack() {
-        Helper.startMenuActivity(this, R.string.extras);
-    }
 }

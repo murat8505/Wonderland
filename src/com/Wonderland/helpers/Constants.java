@@ -6,6 +6,9 @@ import com.Wonderland.extras.sections.AudioActivity;
 import com.Wonderland.extras.sections.VideoActivity;
 import com.Wonderland.extras.sections.WallPaperActivity;
 import com.Wonderland.main.R;
+import com.Wonderland.shop.ClothingMenuActivity;
+import com.Wonderland.shop.direct.GadgetActivity;
+import com.Wonderland.shop.direct.HomeActivity;
 import com.Wonderland.story.sections.CarrollActivity;
 import com.Wonderland.story.sections.PlotActivity;
 import com.Wonderland.story.sections.StrangenessActivity;
@@ -33,15 +36,44 @@ public class Constants {
     public static final String AUDIO_PATH = "audio";
 
     /**
-     * extension of audio files
-     */
-    public static final String AUDIO_EXTENSION = ".m4a";
-
-
-    /**
      * Path of video folder
      */
     public static final String VIDEO_PATH = "video";
+
+    /**
+     * Path of shop folder
+     */
+    public static final String SHOP_PATH = "shop";
+
+    /**
+     * Path of gadget shop folder
+     */
+    public static final String GADGET_SHOP_PATH = SHOP_PATH + "/" + "gadget";
+
+    /**
+     * Path of home shop folder
+     */
+    public static final String HOME_SHOP_PATH = SHOP_PATH + "/" + "home";
+
+    /**
+     * Path of clothing shop folder
+     */
+    public static final String CLOTHING_SHOP_PATH = SHOP_PATH + "/" + "clothing";
+
+    /**
+     * Path of man clothing shop folder
+     */
+    public static final String MAN_CLOTHING_SHOP_PATH = CLOTHING_SHOP_PATH + "/" + "man";
+
+    /**
+     * Path of woman clothing shop folder
+     */
+    public static final String WOMAN_CLOTHING_SHOP_PATH = CLOTHING_SHOP_PATH + "/" + "woman";
+
+    /**
+     * Path of baby clothing shop folder
+     */
+    public static final String BABY_CLOTHING_SHOP_PATH = CLOTHING_SHOP_PATH + "/" + "baby";
 
     /**
      * Path of wallpapers
@@ -52,9 +84,6 @@ public class Constants {
     public static final String IMAGE = "image";
     public static final String TEXT = "text";
     public static final String TITLE = "title";
-    public static final String AUDIO = "audio";
-    public static final String VIDEO = "video";
-    public static final String WALLPAPER = "wallpaper";
     public static final String ID = "id";
 
 
@@ -91,6 +120,7 @@ public class Constants {
         {
             put(R.string.story, R.drawable.story_menu);
             put(R.string.extras, R.drawable.extras_menu);
+            put(R.string.shop, R.drawable.shop_menu);
         }
     };
     /**
@@ -108,7 +138,7 @@ public class Constants {
     /**
      * All Flasks menu
      */
-    public static final int[][] MENU_OPTIONS_COORDINATES = {FIRST_MENU, buildOtherFlasksMenus(SECOND_MENU), buildOtherFlasksMenus(THIRD_MENU)};
+    public static final int[][] MENU_OPTIONS_COORDINATES = {FIRST_MENU, Helper.buildOtherMenus(SECOND_MENU, FIRST_MENU, 1), Helper.buildOtherMenus(THIRD_MENU, FIRST_MENU, 1)};
     /**
      * Array of class objects, needed to forward Main menu buttons
      */
@@ -117,6 +147,11 @@ public class Constants {
      * Array of class objects, needed to forward Extras menu buttons
      */
     private static final Class[] EXTRAS_OPTIONS = {VideoActivity.class, AudioActivity.class, WallPaperActivity.class};
+    /**
+     * Array of class objects, needed to forward Shop menu buttons
+     */
+    private static final Class[] SHOP_OPTIONS = {ClothingMenuActivity.class, HomeActivity.class, GadgetActivity.class};
+
 
     /**
      * Hashtable of menu options
@@ -125,29 +160,9 @@ public class Constants {
         {
             put(R.string.story, STORY_OPTIONS);
             put(R.string.extras, EXTRAS_OPTIONS);
+            put(R.string.shop, SHOP_OPTIONS);
         }
     };
-
-    /**
-     * Translate the coordinates of the first flask menu to obtain the other two
-     *
-     * @param firstPoint, int[]
-     * @return int[] of coordinates
-     */
-    public static int[] buildOtherFlasksMenus(int[] firstPoint) {
-
-        int delta_x = firstPoint[0] - FIRST_MENU[0];
-        int delta_y = firstPoint[1] - FIRST_MENU[1];
-
-        int[] out = new int[FIRST_MENU.length];
-
-        for (int i = 0; i < FIRST_MENU.length; i += 2) {
-            out[i] = FIRST_MENU[i] + delta_x;
-            out[i + 1] = FIRST_MENU[i + 1] + delta_y;
-        }
-
-        return out;
-    }
 
 
     /**
@@ -349,5 +364,24 @@ public class Constants {
             new Character(23, R.drawable.icon_king_24, CHARACTERS_DESCRIPTION[23], CHARACTERS_NAME[23], R.drawable.king_24),
             new Character(24, R.drawable.icon_juri_25, CHARACTERS_DESCRIPTION[24], CHARACTERS_NAME[24], R.drawable.juri_25)
     };
+
+
+    /**
+     * Clothing menu, coordinates of the first clothing on top
+     */
+    private static final int[] FIRST_CLOTHING_MENU = {105, 66, 126, 85, 135, 76, 235, 83, 251, 115, 259, 165, 201, 165, 206, 181, 167, 186, 152, 238, 124, 116, 88, 81};
+    /**
+     * Clothing menu, coordinates of the first point (top right corner) of the second menu (it's mirrored)
+     */
+    private static final int[] SECOND_CLOTHING_MENU = {402, 269};
+    /**
+     * Clothing menu, coordinates of the first point (top left corner) of the third menu
+     */
+    private static final int[] THIRD_CLOTHING_MENU = {108, 465};
+    /**
+     * All Clothing menus
+     */
+    public static final int[][] MENU_CLOTHING_COORDINATES = {FIRST_MENU, Helper.buildOtherMenus(SECOND_CLOTHING_MENU, FIRST_CLOTHING_MENU, -1), Helper.buildOtherMenus(THIRD_CLOTHING_MENU, FIRST_CLOTHING_MENU, 1)};
+
 
 }

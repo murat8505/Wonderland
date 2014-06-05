@@ -17,4 +17,12 @@
     <string name="videoTitle">Video</string>
     <string name="wallpaperTitle">Wallpaper</string>
     <string name="share">Share</string>
+    <string name="shop">Shop</string>
+    <string name="gadgetTitle">Gadgets</string>
+    <string name="homeShopTitle">Home</string>
+    <string name="clothingShopTitle">Clothing</string>
+    <string name="manTitle">Man</string>
+    <string name="babyTitle">Baby</string>
+    <string name="womanTitle">Woman</string>
+    <string name="review">Review</string>
 </resources>

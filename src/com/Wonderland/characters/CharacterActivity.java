@@ -2,17 +2,17 @@ package com.Wonderland.characters;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.Wonderland.extras.sections.WallPaperActivity;
 import com.Wonderland.graphicObjects.IconAdapter;
 import com.Wonderland.graphicObjects.IconBar;
 import com.Wonderland.graphicObjects.MyTextView;
 import com.Wonderland.helpers.Constants;
 import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
-import com.Wonderland.main.CharacterMenuActivity;
 import com.Wonderland.main.R;
 
 /**
@@ -30,7 +30,7 @@ public class CharacterActivity extends MyActivity {
     /**
      * Button to open Wallpaper section
      */
-    private Button gallery;
+    private ImageButton gallery;
 
     /**
      * Name of the character
@@ -59,12 +59,10 @@ public class CharacterActivity extends MyActivity {
 
         setContentView(R.layout.character);
 
-        gallery = (Button) findViewById(R.id.galleryButton);
+        gallery = (ImageButton) findViewById(R.id.galleryButton);
         name = (MyTextView) findViewById(R.id.name);
         description = (TextView) findViewById(R.id.description);
         characterImage = (ImageView) findViewById(R.id.characterImage);
-
-        gallery = (Button) findViewById(R.id.galleryButton);
 
 
         bar = (IconBar) findViewById(R.id.bar);
@@ -74,6 +72,8 @@ public class CharacterActivity extends MyActivity {
                 setCharacter(character);
             }
         });
+
+
     }
 
     /**
@@ -92,7 +92,7 @@ public class CharacterActivity extends MyActivity {
         gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: open gallery activity
+                Helper.startActivity(activity, WallPaperActivity.class);
             }
         });
 
@@ -112,10 +112,5 @@ public class CharacterActivity extends MyActivity {
     @Override
     public String getActivityTitle() {
         return null;
-    }
-
-    @Override
-    public void onBack() {
-        Helper.startActivity(this, CharacterMenuActivity.class);
     }
 }

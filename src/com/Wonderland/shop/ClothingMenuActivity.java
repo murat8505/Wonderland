@@ -1,28 +1,29 @@
-package com.Wonderland.main;
+package com.Wonderland.shop;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.Wonderland.graphicObjects.MyImageView;
-import com.Wonderland.helpers.Constants;
 import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.helpers.Singleton;
+import com.Wonderland.main.R;
+import com.Wonderland.shop.menuOptions.BabyActivity;
+import com.Wonderland.shop.menuOptions.ManActivity;
+import com.Wonderland.shop.menuOptions.WomanActivity;
 
 /**
- * Created by marco on 19/04/14.
- * <p/>
- * Common Activity for (almost all) menus
+ * Created by marco on 05/06/14.
  */
-public class MenuActivity extends MyActivity {
+public class ClothingMenuActivity extends MyActivity {
 
-    /**
-     *
-     */
-    private Class[] options;
     private Singleton singleton = Singleton.getInstance();
 
-    private int title;
+
+    @Override
+    public String getActivityTitle() {
+        return getString(R.string.clothingShopTitle);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +31,8 @@ public class MenuActivity extends MyActivity {
 
         setContentView(R.layout.menu);
 
-        // get the value to know which menu open
-        Intent intent = getIntent();
-        title = intent.getIntExtra(Constants.TITLE, 0);
-
-        options = Constants.MENU_OPTIONS.get(title);
-
-
         MyImageView myImageView = (MyImageView) findViewById(R.id.menuImageView);
-        myImageView.setImageResource(Constants.MENU_BACKGROUND.get(title));
+        myImageView.setImageResource(R.drawable.clothing_menu);
         myImageView.setMyOnTouchEvent(new MyImageView.MyOnTouchEvent() {
             @Override
             public void position(int x, int y) {
@@ -56,15 +50,12 @@ public class MenuActivity extends MyActivity {
      */
     private void findButtonPressed(int x, int y) {
 
-        for (int i = 0; i < 3; i++)
-            if (Helper.testPointInPolygon(x, y, singleton.getMenuOptions()[i])) {
-                Helper.startActivity(this, options[i]);
-                break;
-            }
+        if (Helper.testPointInPolygon(x, y, singleton.getClothingMenuOptions()[0]))
+            Helper.startActivity(this, ManActivity.class);
+        else if (Helper.testPointInPolygon(x, y, singleton.getClothingMenuOptions()[1]))
+            Helper.startActivity(this, WomanActivity.class);
+        else if (Helper.testPointInPolygon(x, y, singleton.getClothingMenuOptions()[2]))
+            Helper.startActivity(this, BabyActivity.class);
     }
 
-    @Override
-    public String getActivityTitle() {
-        return getString(title);
-    }
 }

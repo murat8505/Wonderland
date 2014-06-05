@@ -2,13 +2,13 @@ package com.Wonderland.graphicObjects;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.Wonderland.main.R;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.File;
 import java.util.List;
@@ -19,6 +19,8 @@ import java.util.List;
  * A Grid array used to show mp3, video or wallpapers previews
  */
 public class ExtrasGridArrayAdapter extends MyArrayAdapter<File> {
+
+    ImageLoader imageLoader = ImageLoader.getInstance();
 
     /**
      * Constants used to identify the type of the gallery
@@ -103,8 +105,7 @@ public class ExtrasGridArrayAdapter extends MyArrayAdapter<File> {
 
             case WALLPAPER:
                 myHolder.playButton.setVisibility(View.GONE);
-                Bitmap myBitmap = BitmapFactory.decodeFile(object.getAbsolutePath());
-                myHolder.preview.setImageBitmap(myBitmap);
+                imageLoader.displayImage("file://" + object.getAbsolutePath(), myHolder.preview);
                 break;
         }
 

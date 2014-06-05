@@ -103,7 +103,7 @@ public class Helper {
      */
     public static void startActivity(Context context, Class<?> cls) {
         Intent i = new Intent(context, cls);
-        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        //   i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         context.startActivity(i);
     }
 
@@ -115,7 +115,7 @@ public class Helper {
      */
     public static void startMenuActivity(Context context, int id) {
         Intent i = new Intent(context, MenuActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        //  i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         i.putExtra(Constants.TITLE, id);
         context.startActivity(i);
     }
@@ -311,4 +311,30 @@ public class Helper {
         // show it
         alertDialog.show();
     }
+
+    /**
+     * Translate the coordinates of the first menu to obtain the other two
+     *
+     * @param firstPoint int[] - [x,y]
+     * @param MENU       int[] - array of coordinates of the first valid menu
+     * @param mirroring  int - if it's 1 the result will not be mirrored, if -1 the result will be mirrored on x axis
+     * @return int[] of coordinates
+     */
+    public static int[] buildOtherMenus(int[] firstPoint, int[] MENU, int mirroring) {
+
+        int delta_x = firstPoint[0] - mirroring * MENU[0];
+        int delta_y = firstPoint[1] - MENU[1];
+
+        int[] out = new int[MENU.length];
+        out[0] = firstPoint[0];
+        out[1] = firstPoint[1];
+
+        for (int i = 2; i < MENU.length; i += 2) {
+            out[i] = delta_x + mirroring * MENU[i];
+            out[i + 1] = MENU[i + 1] + delta_y;
+        }
+
+        return out;
+    }
+
 }

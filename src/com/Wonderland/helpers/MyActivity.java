@@ -20,6 +20,11 @@ public abstract class MyActivity extends Activity {
      */
     public Activity activity = this;
 
+    /**
+     * The GroupActionBar
+     */
+    public GroupActionBar groupActionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +38,13 @@ public abstract class MyActivity extends Activity {
         super.onStart();
 
         // Set the title and the back button listener for the action bar
-        GroupActionBar groupActionBar = (GroupActionBar) findViewById(R.id.menuActionBar);
+        groupActionBar = (GroupActionBar) findViewById(R.id.menuActionBar);
         groupActionBar.setText(getActivityTitle());
 
         groupActionBar.setBackButtonOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBack();
+                finish();
             }
         });
     }
@@ -49,12 +54,6 @@ public abstract class MyActivity extends Activity {
      * {@link com.Wonderland.graphicObjects.GroupActionBar#setText(int)}
      */
     public abstract String getActivityTitle();
-
-    /**
-     * @return class, the activity to which return, or null if it isn't.
-     * {@link com.Wonderland.graphicObjects.GroupActionBar#setOnClickListener(android.view.View.OnClickListener)}
-     */
-    public abstract void onBack();
 
     @Override
     public void onBackPressed() {
