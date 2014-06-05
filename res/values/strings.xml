@@ -21,8 +21,8 @@
     <string name="gadgetTitle">Gadgets</string>
     <string name="homeShopTitle">Home</string>
     <string name="clothingShopTitle">Clothing</string>
-    <string name="manTitle">Man</string>
+    <string name="maleTitle">Male</string>
     <string name="babyTitle">Baby</string>
-    <string name="womanTitle">Woman</string>
+    <string name="femaleTitle">Female</string>
     <string name="review">Review</string>
 </resources>

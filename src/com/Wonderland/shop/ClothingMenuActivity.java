@@ -8,8 +8,8 @@ import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.helpers.Singleton;
 import com.Wonderland.main.R;
 import com.Wonderland.shop.menuOptions.BabyActivity;
-import com.Wonderland.shop.menuOptions.ManActivity;
-import com.Wonderland.shop.menuOptions.WomanActivity;
+import com.Wonderland.shop.menuOptions.FemaleActivity;
+import com.Wonderland.shop.menuOptions.MaleActivity;
 
 /**
  * Created by marco on 05/06/14.
@@ -42,6 +42,14 @@ public class ClothingMenuActivity extends MyActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        groupActionBar.showBackButtonText(false);
+        groupActionBar.showBackButton(true);
+    }
+
     /**
      * Find which menu option is pressed and start the correct action
      *
@@ -51,9 +59,9 @@ public class ClothingMenuActivity extends MyActivity {
     private void findButtonPressed(int x, int y) {
 
         if (Helper.testPointInPolygon(x, y, singleton.getClothingMenuOptions()[0]))
-            Helper.startActivity(this, ManActivity.class);
+            Helper.startActivity(this, MaleActivity.class);
         else if (Helper.testPointInPolygon(x, y, singleton.getClothingMenuOptions()[1]))
-            Helper.startActivity(this, WomanActivity.class);
+            Helper.startActivity(this, FemaleActivity.class);
         else if (Helper.testPointInPolygon(x, y, singleton.getClothingMenuOptions()[2]))
             Helper.startActivity(this, BabyActivity.class);
     }

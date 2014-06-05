@@ -1,15 +1,18 @@
 package com.Wonderland.graphicObjects;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.Wonderland.helpers.Helper;
+import com.Wonderland.main.MainActivity;
 import com.Wonderland.main.R;
 
 /**
@@ -44,7 +47,7 @@ public class GroupActionBar extends LinearLayout {
         super.onDraw(canvas);
     }
 
-    private void initialize(Context context, AttributeSet attrs) {
+    private void initialize(final Context context, AttributeSet attrs) {
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.group_action_bar, this, true);
@@ -75,6 +78,17 @@ public class GroupActionBar extends LinearLayout {
                 a.recycle();
             }
         }
+
+        back_w.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (back_w.getVisibility() == VISIBLE) {
+                    Intent i = new Intent(context, MainActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    context.startActivity(i);
+                }
+            }
+        });
     }
 
     /**
@@ -126,8 +140,6 @@ public class GroupActionBar extends LinearLayout {
     public void setBackButtonOnClickListener(OnClickListener onClickListener) {
         if (back.getVisibility() == VISIBLE)
             back.setOnClickListener(onClickListener);
-        else
-            back_w.setOnClickListener(onClickListener);
     }
 
 }

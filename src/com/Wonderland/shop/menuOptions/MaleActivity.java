@@ -9,7 +9,7 @@ import com.Wonderland.shop.AbstractShopActivity;
 /**
  * Created by marco on 05/06/14.
  */
-public class ManActivity extends AbstractShopActivity {
+public class MaleActivity extends AbstractShopActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class ManActivity extends AbstractShopActivity {
 
     @Override
     public String getActivityTitle() {
-        return getString(R.string.manTitle);
+        return getString(R.string.maleTitle);
     }
 
 }

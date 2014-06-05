@@ -152,7 +152,7 @@
         </activity>
 
         <activity
-            android:name="com.Wonderland.shop.menuOptions.ManActivity"
+            android:name="com.Wonderland.shop.menuOptions.MaleActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -161,7 +161,7 @@
         </activity>
 
         <activity
-            android:name="com.Wonderland.shop.menuOptions.WomanActivity"
+            android:name="com.Wonderland.shop.menuOptions.FemaleActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

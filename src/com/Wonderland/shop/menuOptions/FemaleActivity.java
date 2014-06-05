@@ -13,7 +13,7 @@ import com.Wonderland.shop.ReviewRegisterBuyActivity;
 /**
  * Created by marco on 05/06/14.
  */
-public class WomanActivity extends AbstractShopActivity {
+public class FemaleActivity extends AbstractShopActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class WomanActivity extends AbstractShopActivity {
 
     @Override
     public String getActivityTitle() {
-        return getString(R.string.womanTitle);
+        return getString(R.string.femaleTitle);
     }
 
     @Override
