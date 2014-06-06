@@ -24,6 +24,8 @@ public class BrightnessSeekBar extends RelativeLayout {
 
     private int brightness;
 
+    private static final int MINIMUM = 20;
+
     /**
      * Looper to control changes in brightness
      */
@@ -55,7 +57,7 @@ public class BrightnessSeekBar extends RelativeLayout {
         final WindowManager.LayoutParams layout = ((Activity) context).getWindow().getAttributes();
 
         // set max value on the seekbar
-        seekBar.setMax(255);
+        seekBar.setMax(255 - MINIMUM);
         seekBar.setKeyProgressIncrement(1);
 
         //Get the content resolver
@@ -71,7 +73,7 @@ public class BrightnessSeekBar extends RelativeLayout {
 
                 try {
                     brightness = System.getInt(cResolver, System.SCREEN_BRIGHTNESS);
-                    seekBar.setProgress(brightness);
+                    seekBar.setProgress(brightness - MINIMUM);
                     handler.postDelayed(this, 100);
 
                 } catch (Settings.SettingNotFoundException e) {
@@ -88,23 +90,13 @@ public class BrightnessSeekBar extends RelativeLayout {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, final int progress, boolean b) {
-                //Set the minimal brightness level
-                //if seek bar is 20 or any value below
-                if (progress <= 20) {
-                    //Set the brightness to 20
-                    brightness = 20;
-                } else //brightness is greater than 20
-                {
-                    //Set brightness variable based on the progress bar
-                    brightness = progress;
-                }
 
                 //Set the system brightness using the brightness variable value
-                System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness);
+                System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness - MINIMUM);
                 //Get the current window attributes
                 WindowManager.LayoutParams layoutpars = window.getAttributes();
                 //Set the brightness of this window
-                layoutpars.screenBrightness = brightness / (float) 255;
+                layoutpars.screenBrightness = (brightness - MINIMUM) / (float) 255;
                 //Apply attribute changes to this window
                 window.setAttributes(layoutpars);
 
