@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.Wonderland.helpers.Constants;
+import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.main.R;
 
@@ -17,12 +18,14 @@ import com.Wonderland.main.R;
 public class WallPaperViewActivity extends MyActivity {
 
 
+    private String path;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wallpaper);
 
-        String path = getIntent().getExtras().getString(Constants.WALLPAPER_PATH);
+        path = getIntent().getExtras().getString(Constants.WALLPAPER_PATH);
 
         ImageView wallpaper = (ImageView) findViewById(R.id.wallpaper);
 
@@ -40,7 +43,9 @@ public class WallPaperViewActivity extends MyActivity {
 
     @Override
     public String getActivityTitle() {
-        return getString(R.string.wallpaperTitle);
+
+        String name = path.substring(path.lastIndexOf("/"));
+        return Helper.parseFileName(name);
     }
 
 }

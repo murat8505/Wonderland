@@ -2,8 +2,10 @@ package com.Wonderland.shop;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 
 import com.Wonderland.graphicObjects.MyImageView;
+import com.Wonderland.graphicObjects.MyTextView;
 import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.main.R;
@@ -31,6 +33,8 @@ public class ReviewRegisterBuyActivity extends MyActivity {
 
     private int step = 0;
 
+    private MyTextView back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +58,29 @@ public class ReviewRegisterBuyActivity extends MyActivity {
             }
         });
 
+        back = (MyTextView) findViewById(R.id.backButton);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reset();
+            }
+        });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        reset();
+    }
+
+    private void reset() {
+        step = 0;
+        back.setVisibility(View.GONE);
+        back.setText("Back");
+        myImageView.setBackground(getResources().getDrawable(R.drawable.detail));
+        groupActionBar.showBackButton(true);
     }
 
     @Override
@@ -69,6 +95,8 @@ public class ReviewRegisterBuyActivity extends MyActivity {
                 case 0:
                     myImageView.setBackground(getResources().getDrawable(R.drawable.reg1));
                     groupActionBar.setText("Log in");
+                    back.setVisibility(View.VISIBLE);
+                    groupActionBar.showBackButton(false);
                     break;
                 case 1:
                     myImageView.setBackground(getResources().getDrawable(R.drawable.reg2));
@@ -77,6 +105,7 @@ public class ReviewRegisterBuyActivity extends MyActivity {
                 case 2:
                     myImageView.setBackground(getResources().getDrawable(R.drawable.reg3));
                     groupActionBar.setText("Cart");
+                    back.setText("Cancel");
                     break;
                 case 3:
                     finish();

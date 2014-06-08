@@ -138,8 +138,8 @@ public class GroupActionBar extends LinearLayout {
      * @param onClickListener, OnClickListener
      */
     public void setBackButtonOnClickListener(OnClickListener onClickListener) {
-        if (back.getVisibility() == VISIBLE)
-            back.setOnClickListener(onClickListener);
+//        if (back.getVisibility() == VISIBLE)
+        back.setOnClickListener(onClickListener);
     }
 
 }

@@ -13,12 +13,15 @@
         android:id="@+id/menuActionBar" />
 
     <GridView
+        android:paddingTop="30px"
+        android:paddingBottom="30px"
         android:id="@+id/gridView"
         android:numColumns="2"
         android:gravity="center"
         android:stretchMode="columnWidth"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/shop_background" />
+        android:background="@drawable/shop_background"
+        android:verticalSpacing="47px" />
 
 </LinearLayout>

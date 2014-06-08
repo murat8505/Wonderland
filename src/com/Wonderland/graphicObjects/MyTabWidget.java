@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentTabHost;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
 
@@ -30,7 +30,8 @@ public class MyTabWidget extends LinearLayout {
     int currentTab = 0;
     private Context context;
     private FragmentTabHost tabHost;
-    private Button forward, backward;
+    private ImageButton forward;
+    private ImageButton backward;
 
     public MyTabWidget(Context context) {
         super(context);
@@ -56,8 +57,8 @@ public class MyTabWidget extends LinearLayout {
         tabHost.setup(context, ((FragmentActivity) context).getSupportFragmentManager(), R.id.tabFrameLayout);
         tabHost.getTabWidget().setVisibility(GONE);
 
-        forward = (Button) findViewById(R.id.forward);
-        backward = (Button) findViewById(R.id.backward);
+        forward = (ImageButton) findViewById(R.id.forward);
+        backward = (ImageButton) findViewById(R.id.backward);
     }
 
     /**
@@ -116,11 +117,11 @@ public class MyTabWidget extends LinearLayout {
 
     }
 
-    public Button getForwardButton() {
+    public ImageButton getForwardButton() {
         return forward;
     }
 
-    public Button getBackwardButton() {
+    public ImageButton getBackwardButton() {
         return backward;
     }
 

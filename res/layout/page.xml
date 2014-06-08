@@ -3,8 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="@dimen/page_padding_top_bottom">
+    android:layout_height="match_parent">
 
     <com.Wonderland.graphicObjects.MyTextView
         android:layout_width="wrap_content"
@@ -13,7 +12,7 @@
         android:textSize="@dimen/other_title_size"
         android:textAlignment="textStart"
         android:id="@+id/pageTitle"
-        android:paddingBottom="@dimen/page_padding_top_bottom"
+        android:paddingBottom="@dimen/padding_bottom_title"
         android:layout_gravity="left" />
 
     <ScrollView

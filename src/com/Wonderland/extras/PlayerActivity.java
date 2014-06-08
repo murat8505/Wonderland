@@ -11,6 +11,7 @@ import android.widget.VideoView;
 import com.Wonderland.graphicObjects.GroupActionBar;
 import com.Wonderland.graphicObjects.Player;
 import com.Wonderland.helpers.Constants;
+import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.main.R;
 
@@ -96,7 +97,12 @@ public class PlayerActivity extends MyActivity {
 
         String title = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
         GroupActionBar actionBar = (GroupActionBar) findViewById(R.id.menuActionBar);
-        actionBar.setText(title);
+
+        if (title == null) {
+            String name = path.substring(path.lastIndexOf("/"));
+            actionBar.setText(Helper.parseFileName(name));
+        } else
+            actionBar.setText(title);
     }
 
     @Override

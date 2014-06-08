@@ -7,8 +7,8 @@
     android:background="@drawable/story_background"
     android:paddingLeft="@dimen/page_padding_left_right"
     android:paddingRight="@dimen/page_padding_left_right"
-    android:paddingTop="@dimen/page_padding_top_bottom"
-    android:paddingBottom="@dimen/page_padding_top_bottom">
+    android:paddingTop="@dimen/page_padding_top_title"
+    android:paddingBottom="@dimen/page_padding_top_title">
 
     <android.support.v4.app.FragmentTabHost
         android:id="@+id/tabhost"
@@ -42,9 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_weight="0">
+        android:layout_weight="0"
+        android:paddingTop="10px">
 
-        <Button
+        <ImageButton
             android:id="@+id/backward"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -52,7 +53,7 @@
             android:clickable="true"
             android:scaleX="-1" />
 
-        <Button
+        <ImageButton
             android:id="@+id/forward"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"

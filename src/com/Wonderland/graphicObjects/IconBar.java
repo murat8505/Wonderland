@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -23,7 +23,8 @@ public class IconBar extends LinearLayout {
     /**
      * Buttons to scroll 1 position up or down the list
      */
-    private Button up, down;
+    private ImageButton up;
+    private ImageButton down;
 
     /**
      * ListView of the icons
@@ -52,8 +53,8 @@ public class IconBar extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.icon_list, this, true);
 
-        up = (Button) findViewById(R.id.buttonUp);
-        down = (Button) findViewById(R.id.buttonDown);
+        up = (ImageButton) findViewById(R.id.buttonUp);
+        down = (ImageButton) findViewById(R.id.buttonDown);
 
         listView = (ListView) findViewById(R.id.iconListView);
 

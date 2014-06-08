@@ -57,7 +57,7 @@ public class BrightnessSeekBar extends RelativeLayout {
         final WindowManager.LayoutParams layout = ((Activity) context).getWindow().getAttributes();
 
         // set max value on the seekbar
-        seekBar.setMax(255 - MINIMUM);
+        seekBar.setMax(255);
         seekBar.setKeyProgressIncrement(1);
 
         //Get the content resolver
@@ -73,8 +73,8 @@ public class BrightnessSeekBar extends RelativeLayout {
 
                 try {
                     brightness = System.getInt(cResolver, System.SCREEN_BRIGHTNESS);
-                    seekBar.setProgress(brightness - MINIMUM);
-                    handler.postDelayed(this, 100);
+                    seekBar.setProgress(brightness);
+                    handler.postDelayed(this, 5000);
 
                 } catch (Settings.SettingNotFoundException e) {
                     e.printStackTrace();
@@ -92,11 +92,11 @@ public class BrightnessSeekBar extends RelativeLayout {
             public void onProgressChanged(SeekBar seekBar, final int progress, boolean b) {
 
                 //Set the system brightness using the brightness variable value
-                System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness - MINIMUM);
+                System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness);
                 //Get the current window attributes
                 WindowManager.LayoutParams layoutpars = window.getAttributes();
                 //Set the brightness of this window
-                layoutpars.screenBrightness = (brightness - MINIMUM) / (float) 255;
+                layoutpars.screenBrightness = (brightness) / (float) 255;
                 //Apply attribute changes to this window
                 window.setAttributes(layoutpars);
 

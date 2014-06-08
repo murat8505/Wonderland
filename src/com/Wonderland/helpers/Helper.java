@@ -337,4 +337,23 @@ public class Helper {
         return out;
     }
 
+
+    /**
+     * Parse the name of a file to obtain a correct string.
+     * The name is in the format "01 filename.ext" and this method returns "filename"
+     *
+     * @param name String
+     * @return String
+     */
+    public static String parseFileName(String name) {
+
+        int extension = name.lastIndexOf(".");
+
+        if (extension > -1)
+            name = name.substring(0, extension);
+
+        name = name.substring(3).replace("_", "/");
+
+        return name;
+    }
 }

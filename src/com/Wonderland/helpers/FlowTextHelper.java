@@ -28,8 +28,8 @@ public class FlowTextHelper {
         float textLineHeight = messageView.getPaint().getTextSize();
 
         // Set the span according to the number of lines and width of the image
-        // the "2" is indicative, I've found out it's better
-        int lines = (int) Math.round(height / textLineHeight) - 2;
+        // the "1" is indicative, I've found out it's better
+        int lines = (int) Math.round(height / textLineHeight) - 1;
         //For an html text you can use this line: SpannableStringBuilder ss = (SpannableStringBuilder)Html.fromHtml(text);
         SpannableString ss = new SpannableString(text);
         ss.setSpan(new MyLeadingMarginSpan2(lines, width), 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

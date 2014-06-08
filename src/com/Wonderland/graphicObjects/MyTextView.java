@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.TextView;
 
+import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.Singleton;
 
 import java.io.File;
@@ -52,15 +53,7 @@ public class MyTextView extends TextView {
      */
     public void setFileName(File file) {
 
-        String name = file.getName();
-
-        int extension = name.lastIndexOf(".");
-
-        if (extension > -1)
-            name = name.substring(0, extension);
-
-        name = name.substring(3).replace("_", "/");
-
+        String name = Helper.parseFileName(file.getName());
         setText(name);
     }
 

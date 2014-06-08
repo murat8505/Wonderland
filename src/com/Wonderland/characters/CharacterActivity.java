@@ -96,7 +96,7 @@ public class CharacterActivity extends MyActivity {
             }
         });
 
-        bar.setSelected(character.getPosition());
+//        bar.setSelected(character.getPosition());
     }
 
     @Override
