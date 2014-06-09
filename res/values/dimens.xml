@@ -13,8 +13,8 @@
     <dimen name="page_padding_left_right">52px</dimen>
     <dimen name="icon_button_top_bottom">17px</dimen>
     <dimen name="icon_row">104px</dimen>
-    <dimen name="player_width">250dp</dimen>
-    <dimen name="player_height">200dp</dimen>
+    <dimen name="player_width">434px</dimen>
+    <dimen name="player_height">327px</dimen>
     <dimen name="padding_bottom_title">20px</dimen>
 
 

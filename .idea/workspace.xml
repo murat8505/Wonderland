@@ -25,6 +25,16 @@
           <theme>@android:style/Theme.Holo.Light.NoActionBar.Fullscreen</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/my_seekbar.xml">
+        <config>
+          <theme>@android:style/Theme.Holo.Light.NoActionBar.Fullscreen</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/volume_seekbar.xml">
+        <config>
+          <theme>@android:style/Theme.Holo.Light.NoActionBar.Fullscreen</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AndroidLogFilters">
@@ -32,32 +42,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac6c23c5-70bf-4987-ace6-7cc44b923614" name="Default" comment="Bug correction">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/locations.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/locations.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/BrightnessSeekBar.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/BrightnessSeekBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/characters/CharacterActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/characters/CharacterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/helpers/Constants.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/helpers/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/helpers/FlowTextHelper.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/helpers/FlowTextHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/GroupActionBar.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/GroupActionBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/helpers/Helper.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/helpers/Helper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/IconBar.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/IconBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/MyTabWidget.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/MyTabWidget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/MyTextView.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/MyTextView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/extras/PlayerActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/extras/PlayerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/shop/ReviewRegisterBuyActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/shop/ReviewRegisterBuyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Wonderland/extras/WallPaperViewActivity.java" afterPath="$PROJECT_DIR$/src/com/Wonderland/extras/WallPaperViewActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/character.xml" afterPath="$PROJECT_DIR$/res/layout/character.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/characters_listview_row.xml" afterPath="$PROJECT_DIR$/res/layout/characters_listview_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/custom_tabwidget.xml" afterPath="$PROJECT_DIR$/res/layout/custom_tabwidget.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/player_progress.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/seekbar_progress.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/brightness_seekbar.xml" afterPath="$PROJECT_DIR$/res/layout/brightness_seekbar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/extras.xml" afterPath="$PROJECT_DIR$/res/layout/extras.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/extras_gridview_element.xml" afterPath="$PROJECT_DIR$/res/layout/extras_gridview_element.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/group_action_bar.xml" afterPath="$PROJECT_DIR$/res/layout/group_action_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/icon_element.xml" afterPath="$PROJECT_DIR$/res/layout/icon_element.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/icon_list.xml" afterPath="$PROJECT_DIR$/res/layout/icon_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/page.xml" afterPath="$PROJECT_DIR$/res/layout/page.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/review_register_buy.xml" afterPath="$PROJECT_DIR$/res/layout/review_register_buy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/shop.xml" afterPath="$PROJECT_DIR$/res/layout/shop.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/player.xml" afterPath="$PROJECT_DIR$/res/layout/player.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/player_activity.xml" afterPath="$PROJECT_DIR$/res/layout/player_activity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/volume_seekbar.xml" afterPath="$PROJECT_DIR$/res/layout/volume_seekbar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Wonderland.iws" />
@@ -138,11 +131,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="extras_gridview_element.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/extras_gridview_element.xml">
+      <file leaf-file-name="brightness_seekbar.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/brightness_seekbar.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seekbar_progress.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/seekbar_progress.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.923077" vertical-offset="60" max-vertical-offset="765">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player_progress.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/player_progress.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="360">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -151,64 +167,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extras.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/extras.xml">
+      <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.576923" vertical-offset="0" max-vertical-offset="540">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/shop.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.846154" vertical-offset="0" max-vertical-offset="480">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="review_register_buy.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/review_register_buy.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82542694" vertical-offset="0" max-vertical-offset="555">
-              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dimens.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2355">
+              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player_activity.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/player_activity.xml">
+      <file leaf-file-name="styles.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.269231" vertical-offset="536" max-vertical-offset="1050">
-              <caret line="57" column="49" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.48824593" vertical-offset="0" max-vertical-offset="553">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
+        </entry>
+      </file>
+      <file leaf-file-name="player.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/player.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
         </entry>
@@ -231,20 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/VolumeSeekBar.java" />
-        <option value="$PROJECT_DIR$/res/layout/brightness_seekbar.xml" />
-        <option value="$PROJECT_DIR$/res/layout/player_activity.xml" />
-        <option value="$PROJECT_DIR$/res/layout/wallpaper.xml" />
-        <option value="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/ShopGridArrayAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/ShopArrayAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/Wonderland/shop/direct/GadgetActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/Wonderland/shop/direct/HomeActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/clothing.xml" />
-        <option value="$PROJECT_DIR$/res/layout/review_registe_buy.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/Wonderland/helpers/MyActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/Wonderland/main/CharacterMenuActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/Wonderland/main/MenuActivity.java" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/shop/AbstractShopActivity.java" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/shop/menuOptions/BabyActivity.java" />
         <option value="$PROJECT_DIR$/src/com/Wonderland/shop/menuOptions/ManActivity.java" />
@@ -276,12 +249,26 @@
         <option value="$PROJECT_DIR$/res/layout/icon_element.xml" />
         <option value="$PROJECT_DIR$/res/layout/icon_list.xml" />
         <option value="$PROJECT_DIR$/res/layout/page.xml" />
-        <option value="$PROJECT_DIR$/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/res/layout/character.xml" />
         <option value="$PROJECT_DIR$/res/layout/extras_gridview_element.xml" />
         <option value="$PROJECT_DIR$/res/layout/extras.xml" />
         <option value="$PROJECT_DIR$/res/layout/shop.xml" />
         <option value="$PROJECT_DIR$/res/layout/review_register_buy.xml" />
+        <option value="$PROJECT_DIR$/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/res/layout/player_activity.xml" />
+        <option value="$PROJECT_DIR$/res/layout/elements/my_seekbar.xml" />
+        <option value="$PROJECT_DIR$/src/com/Wonderland/graphicObjects/MySeekBar.java" />
+        <option value="$PROJECT_DIR$/res/layout/test.xml" />
+        <option value="$PROJECT_DIR$/res/drawable-hdpi/seekbar.xml" />
+        <option value="$PROJECT_DIR$/res/layout/my_seekbar.xml" />
+        <option value="$PROJECT_DIR$/res/layout/volume_seekbar.xml" />
+        <option value="$PROJECT_DIR$/res/layout/brightness_seekbar.xml" />
+        <option value="$PROJECT_DIR$/res/drawable-hdpi/seekbar_progress.xml" />
+        <option value="$PROJECT_DIR$/res/layout/player_progress.xml" />
+        <option value="$PROJECT_DIR$/res/drawable-hdpi/player_progress.xml" />
+        <option value="$PROJECT_DIR$/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/res/layout/player.xml" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
       </list>
     </option>
   </component>
@@ -661,6 +648,24 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wonderland" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wonderland" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -947,7 +952,11 @@
       <created>1402044110095</created>
       <updated>1402044110095</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Bug correction">
+      <created>1402266866035</created>
+      <updated>1402266866035</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -967,14 +976,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23990306" sideWeight="0.500565" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45310014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4519774" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34463277" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24838188" sideWeight="0.49943504" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24798061" sideWeight="0.49943504" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3220339" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1042,7 +1051,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/Wonderland/shop/ReviewRegisterBuyActivity.java</url>
-          <line>63</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="68" />
         </line-breakpoint>
@@ -1063,57 +1072,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/shop/AbstractShopActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48951048" vertical-offset="0" max-vertical-offset="858">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/shop/menuOptions/BabyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4450262" vertical-offset="0" max-vertical-offset="573">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/main/CharacterMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7905759" vertical-offset="1332" max-vertical-offset="1935">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/extras/AbstractGridViewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="900">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/main/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1005">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58573854" vertical-offset="0" max-vertical-offset="589">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/shop/menuOptions/FemaleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42358804" vertical-offset="0" max-vertical-offset="602">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Wonderland/shop/menuOptions/MaleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42358804" vertical-offset="0" max-vertical-offset="602">
@@ -1144,8 +1102,8 @@
         <state vertical-scroll-proportion="0.48387095" vertical-offset="420" max-vertical-offset="1575">
           <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
           <folding>
-            <element signature="e#3223#3224#0" expanded="false" />
-            <element signature="e#3262#3263#0" expanded="false" />
+            <element signature="e#3193#3194#0" expanded="false" />
+            <element signature="e#3232#3233#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1203,6 +1161,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30564785" vertical-offset="851" max-vertical-offset="1620">
           <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,14 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/graphicObjects/BrightnessSeekBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38541666" vertical-offset="684" max-vertical-offset="1590">
-          <caret line="68" column="50" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Wonderland/extras/PlayerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4269103" vertical-offset="883" max-vertical-offset="1485">
@@ -1261,6 +1212,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8172043" vertical-offset="56" max-vertical-offset="645">
           <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,10 +1229,10 @@
         <state vertical-scroll-proportion="1.2956989" vertical-offset="298" max-vertical-offset="1890">
           <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
           <folding>
-            <element signature="e#1752#1912#0" expanded="true" />
-            <element signature="e#1901#1902#0" expanded="true" />
-            <element signature="e#2008#2151#0" expanded="true" />
-            <element signature="e#2140#2141#0" expanded="true" />
+            <element signature="e#1722#1882#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+            <element signature="e#1978#2122#0" expanded="true" />
+            <element signature="e#2111#2112#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1307,23 +1259,15 @@
           <folding>
             <element signature="e#181#200#0" expanded="true" />
             <element signature="e#523#556#0" expanded="true" />
-            <element signature="e#885#918#0" expanded="true" />
-            <element signature="e#1153#1172#0" expanded="true" />
-            <element signature="e#1322#1353#0" expanded="true" />
-            <element signature="e#1389#1421#0" expanded="true" />
+            <element signature="e#886#919#0" expanded="true" />
+            <element signature="e#1155#1174#0" expanded="true" />
+            <element signature="e#1324#1355#0" expanded="true" />
+            <element signature="e#1391#1423#0" expanded="true" />
           </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2325">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Wonderland/story/Page.java">
@@ -1469,8 +1413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/extras.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.576923" vertical-offset="0" max-vertical-offset="540">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="38" />
+        <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1489,22 +1433,13 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/player.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/review_register_buy.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7685009" vertical-offset="90" max-vertical-offset="660">
-          <caret line="33" column="66" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/player_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.269231" vertical-offset="536" max-vertical-offset="1050">
-          <caret line="57" column="49" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="49" />
-          <folding />
+        <state vertical-scroll-proportion="-16.73077" vertical-offset="0" max-vertical-offset="525">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="e#1130#1155#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1514,20 +1449,112 @@
     <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/review_register_buy.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/graphicObjects/VolumeSeekBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82542694" vertical-offset="0" max-vertical-offset="555">
-          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1320">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Wonderland/graphicObjects/BrightnessSeekBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37412587" vertical-offset="234" max-vertical-offset="1590">
+          <caret line="52" column="66" selection-start-line="51" selection-start-column="8" selection-end-line="52" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/player_activity.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+          <folding>
+            <element signature="e#453#472#0" expanded="true" />
+            <element signature="e#867#898#0" expanded="true" />
+            <element signature="e#1044#1065#0" expanded="true" />
+            <element signature="e#1100#1122#0" expanded="true" />
+            <element signature="e#1395#1420#0" expanded="true" />
+            <element signature="e#2316#2331#0" expanded="true" />
+            <element signature="e#2389#2414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/brightness_seekbar.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/volume_seekbar.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="585">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/seekbar_progress.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2355">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/player_progress.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="360">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/player.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48824593" vertical-offset="0" max-vertical-offset="553">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

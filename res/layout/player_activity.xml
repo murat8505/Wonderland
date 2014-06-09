@@ -5,17 +5,21 @@
     android:layout_height="match_parent"
     android:background="@drawable/player_background">
 
-    <LinearLayout
+    <com.Wonderland.graphicObjects.GroupActionBar xmlns:custom="http://schemas.android.com/apk/res/com.Wonderland.main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="@dimen/action_bar"
+        custom:showBackButton="false"
+        custom:showBackButtonText="false"
+        android:id="@+id/menuActionBar"
+        android:layout_alignParentStart="true" />
 
-        <com.Wonderland.graphicObjects.GroupActionBar xmlns:custom="http://schemas.android.com/apk/res/com.Wonderland.main"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/action_bar"
-            custom:showBackButton="false"
-            custom:showBackButtonText="false"
-            android:id="@+id/menuActionBar" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/menuActionBar"
+        android:paddingTop="@dimen/page_padding_top_title"
+        android:layout_centerHorizontal="true">
 
 
         <VideoView
@@ -25,13 +29,14 @@
             android:layout_gravity="center_horizontal" />
 
         <com.Wonderland.graphicObjects.MyTextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/author"
             android:textSize="@dimen/player_text_size"
             android:textColor="@color/Alice_Title"
-            android:paddingTop="20dp"
-            android:text="test" />
+            android:paddingTop="45px"
+            android:text="test"
+            android:layout_gravity="center_horizontal" />
 
 
         <com.Wonderland.graphicObjects.Player

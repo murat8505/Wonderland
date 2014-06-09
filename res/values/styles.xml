@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MySeekBar" parent="android:Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/seekbar_progress</item>
+        <item name="android:minHeight">5px</item>
+        <item name="android:maxHeight">5px</item>
+        <item name="android:thumb">@drawable/seek_thumb</item>
+    </style>
+
+    <style name="MyPlayerSeekBar" parent="android:Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/player_progress</item>
+        <item name="android:minHeight">5px</item>
+        <item name="android:maxHeight">5px</item>
+        <item name="android:thumb">@drawable/player_thumb</item>
+        <item name="android:thumbOffset">5px</item>
+    </style>
+
+
+</resources>

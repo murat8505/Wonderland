@@ -22,7 +22,8 @@
         android:layout_gravity="center_vertical" />
 
     <SeekBar
-        android:layout_width="wrap_content"
+        style="@style/MyPlayerSeekBar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/seekBar"
         android:layout_weight="1"

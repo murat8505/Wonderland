@@ -5,6 +5,8 @@
     <color name="Icon_Background">#99E4E0DD</color>
     <color name="icon_and_name_divider">#80D9D5D2</color>
     <color name="icon_and_name_background">#D8E4E0DD</color>
+    <color name="seekbar_progress">#D280292F</color>
+    <color name="seekbar">#96b5b6b5</color>
 
     <color name="White">#FFFFFF</color>
     <color name="Ivory">#FFFFF0</color>

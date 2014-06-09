@@ -14,12 +14,15 @@
         android:layout_alignParentStart="true" />
 
     <SeekBar
+        style="@style/MySeekBar"
+        android:layout_centerVertical="true"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:id="@+id/seekBar"
         android:layout_toLeftOf="@+id/imageView"
-        android:layout_toRightOf="@+id/imageView2" />
+        android:layout_toRightOf="@+id/imageView2"
+        android:progress="20" />
 
     <ImageView
         android:layout_width="wrap_content"
