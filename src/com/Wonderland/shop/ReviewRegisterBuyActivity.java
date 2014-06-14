@@ -81,6 +81,7 @@ public class ReviewRegisterBuyActivity extends MyActivity {
         back.setText("Back");
         myImageView.setBackground(getResources().getDrawable(R.drawable.detail));
         groupActionBar.showBackButton(true);
+        groupActionBar.setText(getActivityTitle());
     }
 
     @Override

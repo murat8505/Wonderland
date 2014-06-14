@@ -34,24 +34,27 @@
             android:id="@+id/author"
             android:textSize="@dimen/player_text_size"
             android:textColor="@color/Alice_Title"
-            android:paddingTop="45px"
             android:text="test"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20px" />
 
 
         <com.Wonderland.graphicObjects.Player
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/player" />
+            android:id="@+id/player"
+            android:paddingTop="20px" />
 
         <com.Wonderland.graphicObjects.VolumeSeekBar
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:paddingTop="25px" />
 
         <com.Wonderland.graphicObjects.BrightnessSeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/brightness" />
+            android:id="@+id/brightness"
+            android:paddingTop="20px" />
 
     </LinearLayout>
 

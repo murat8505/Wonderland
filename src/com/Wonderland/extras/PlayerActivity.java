@@ -91,9 +91,13 @@ public class PlayerActivity extends MyActivity {
         MediaMetadataRetriever mmr = new MediaMetadataRetriever();
         mmr.setDataSource(path);
 
-        String autor = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
+        String author = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
         TextView authorTextView = (TextView) findViewById(R.id.author);
-        authorTextView.setText(autor);
+
+        if (author == null)
+            authorTextView.setVisibility(View.GONE);
+        else
+            authorTextView.setText(author);
 
         String title = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
         GroupActionBar actionBar = (GroupActionBar) findViewById(R.id.menuActionBar);

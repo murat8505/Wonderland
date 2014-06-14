@@ -91,6 +91,8 @@ public class BrightnessSeekBar extends RelativeLayout {
             @Override
             public void onProgressChanged(SeekBar seekBar, final int progress, boolean b) {
 
+                brightness = progress;
+
                 //Set the system brightness using the brightness variable value
                 System.putInt(cResolver, System.SCREEN_BRIGHTNESS, brightness);
                 //Get the current window attributes

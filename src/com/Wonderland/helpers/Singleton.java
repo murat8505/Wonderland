@@ -3,6 +3,7 @@ package com.Wonderland.helpers;
 import android.content.Context;
 import android.graphics.Typeface;
 
+import com.Wonderland.characters.Character;
 import com.Wonderland.polygon.Polygon;
 
 /**
@@ -51,7 +52,12 @@ public class Singleton {
             Helper.createCircle(Constants.QUEEN_G),
             Helper.createCircle(Constants.COURT_H)
     };
-    ;
+
+    /**
+     * In the character activity memorize the character displayed for restore purpose
+     */
+    private com.Wonderland.characters.Character characterDisplayed = null;
+
 
     private Singleton() {
 
@@ -150,5 +156,14 @@ public class Singleton {
      */
     public Polygon[] getClothingMenuOptions() {
         return clothingMenuOptions;
+    }
+
+
+    public Character getCharacterDisplayed() {
+        return characterDisplayed;
+    }
+
+    public void setCharacterDisplayed(Character characterDisplayed) {
+        this.characterDisplayed = characterDisplayed;
     }
 }

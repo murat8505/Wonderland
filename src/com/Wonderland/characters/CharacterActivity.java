@@ -13,6 +13,7 @@ import com.Wonderland.graphicObjects.MyTextView;
 import com.Wonderland.helpers.Constants;
 import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
+import com.Wonderland.helpers.Singleton;
 import com.Wonderland.main.R;
 
 /**
@@ -52,6 +53,8 @@ public class CharacterActivity extends MyActivity {
      */
     private IconBar bar;
 
+    Singleton singleton = Singleton.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +76,8 @@ public class CharacterActivity extends MyActivity {
             }
         });
 
+        int position = getIntent().getIntExtra(Constants.ID, 0);
+        singleton.setCharacterDisplayed(Constants.CHARACTERS[position]);
 
     }
 
@@ -105,8 +110,14 @@ public class CharacterActivity extends MyActivity {
 
         // If I try to set the first element of the bar in another "moment" scroll position
         // is incorrect, probably because it isn't been instantiated yet
-        int position = getIntent().getIntExtra(Constants.ID, 0);
-        setCharacter(Constants.CHARACTERS[position]);
+        setCharacter(singleton.getCharacterDisplayed());
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        singleton.setCharacterDisplayed(character);
     }
 
     @Override
