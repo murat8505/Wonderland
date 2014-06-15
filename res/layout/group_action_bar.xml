@@ -5,15 +5,20 @@
     android:layout_height="@dimen/action_bar"
     android:background="@color/Black">
 
-    <ImageButton
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/back"
+        android:visibility="invisible">
+
+        <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/back"
-        android:id="@+id/back"
         android:background="@null"
         android:layout_centerVertical="true"
-        android:paddingLeft="@dimen/back_button_padding_left"
-        android:visibility="invisible" />
+        android:paddingLeft="@dimen/back_button_padding_left" />
+    </FrameLayout>
 
     <ImageButton
         android:layout_width="wrap_content"
