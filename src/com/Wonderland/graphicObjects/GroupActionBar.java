@@ -7,7 +7,7 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,7 +25,7 @@ public class GroupActionBar extends LinearLayout {
     /**
      * Back buttons
      */
-    private ImageButton back, back_w;
+    private FrameLayout back, back_w;
 
     public GroupActionBar(Context context) {
         super(context);
@@ -52,8 +52,8 @@ public class GroupActionBar extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.group_action_bar, this, true);
 
-        back = (ImageButton) findViewById(R.id.back);
-        back_w = (ImageButton) findViewById(R.id.back_w);
+        back = (FrameLayout) findViewById(R.id.back);
+        back_w = (FrameLayout) findViewById(R.id.back_w);
 
         setText(R.string.app_name);
         showBackButton(false);
