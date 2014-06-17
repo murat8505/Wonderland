@@ -1,7 +1,7 @@
 package com.Wonderland.graphicObjects;
 
 import android.content.Context;
-import android.graphics.Canvas;
+import android.graphics.Rect;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -57,9 +57,26 @@ public class MyTextView extends TextView {
         setText(name);
     }
 
+    // Without this three overrides the automatic horizontal scroll will not work
+    @Override
+    protected void onFocusChanged(boolean focused, int direction,
+                                  Rect previouslyFocusedRect) {
+        if (focused) {
+            super.onFocusChanged(focused, direction, previouslyFocusedRect);
+        }
+    }
 
     @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+    public void onWindowFocusChanged(boolean focused) {
+        if (focused) {
+            super.onWindowFocusChanged(focused);
+        }
     }
+
+    @Override
+    public boolean isFocused() {
+        return true;
+    }
+
+    //////////////////////////////////////////////////////////////
 }

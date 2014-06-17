@@ -39,13 +39,32 @@
 
     <com.Wonderland.graphicObjects.MyTextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/title"
         android:textSize="@dimen/title_size"
         android:textColor="@color/White"
         android:text="pippo"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="@dimen/title_text_margin_left"
-        android:layout_marginRight="@dimen/title_text_margin_right" />
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/back"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_toLeftOf="@+id/frameLayout" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:background="@null"
+            android:paddingLeft="@dimen/back_button_padding_left"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
 
 </RelativeLayout>
