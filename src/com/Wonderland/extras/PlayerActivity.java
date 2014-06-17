@@ -96,8 +96,10 @@ public class PlayerActivity extends MyActivity {
 
         if (author == null)
             authorTextView.setVisibility(View.GONE);
-        else
+        else {
             authorTextView.setText(author);
+
+        }
 
         String title = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
         GroupActionBar actionBar = (GroupActionBar) findViewById(R.id.menuActionBar);

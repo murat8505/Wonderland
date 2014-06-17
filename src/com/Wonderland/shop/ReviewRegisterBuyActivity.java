@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.Wonderland.graphicObjects.MyImageView;
 import com.Wonderland.graphicObjects.MyTextView;
+import com.Wonderland.helpers.Constants;
 import com.Wonderland.helpers.Helper;
 import com.Wonderland.helpers.MyActivity;
 import com.Wonderland.main.R;
@@ -34,6 +35,8 @@ public class ReviewRegisterBuyActivity extends MyActivity {
     private int step = 0;
 
     private MyTextView back;
+
+    private String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +70,8 @@ public class ReviewRegisterBuyActivity extends MyActivity {
             }
         });
 
+        title = getIntent().getStringExtra(Constants.TITLE);
+
     }
 
     @Override
@@ -86,7 +91,7 @@ public class ReviewRegisterBuyActivity extends MyActivity {
 
     @Override
     public String getActivityTitle() {
-        return "T-shirt";
+        return title;
     }
 
     private void onClick(int x, int y) {

@@ -16,6 +16,7 @@
     <dimen name="player_width">434px</dimen>
     <dimen name="player_height">327px</dimen>
     <dimen name="padding_bottom_title">20px</dimen>
+    <dimen name="icon_width">90px</dimen>
 
 
 </resources>

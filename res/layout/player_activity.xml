@@ -19,7 +19,8 @@
         android:orientation="vertical"
         android:layout_below="@+id/menuActionBar"
         android:paddingTop="@dimen/page_padding_top_title"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout2">
 
 
         <VideoView
@@ -29,15 +30,24 @@
             android:layout_gravity="center_horizontal" />
 
         <com.Wonderland.graphicObjects.MyTextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
             android:id="@+id/author"
             android:textSize="@dimen/player_text_size"
             android:textColor="@color/Alice_Title"
             android:text="test"
-            android:layout_gravity="center_horizontal"
             android:paddingTop="20px" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/player_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/close">
 
         <com.Wonderland.graphicObjects.Player
             android:layout_width="match_parent"
