@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.Wonderland.graphicObjects.GroupActionBar;
 import com.Wonderland.graphicObjects.MyTabWidget;
@@ -27,6 +28,7 @@ public abstract class AbstractStoryActivity extends FragmentActivity {
 
         // fix screen orientation
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 
         setContentView(R.layout.story);
